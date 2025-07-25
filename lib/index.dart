@@ -31,3 +31,5 @@ export '/pages/gestion_estadisticas/resume_categoria/resume_categoria_widget.dar
     show ResumeCategoriaWidget;
 export '/pages/gestion_estadisticas/resumen_historico/resumen_historico_widget.dart'
     show ResumenHistoricoWidget;
+export '/pages/gestion_metas/metas_ahorro/metas_ahorro_widget.dart'
+    show MetasAhorroWidget;

@@ -194,39 +194,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
             name: EstadisticasWidget.routeName,
             path: EstadisticasWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'Estadisticas')
-                : NavBarPage(
-                    initialPage: 'Estadisticas',
-                    page: EstadisticasWidget(),
-                  )),
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: EstadisticasWidget(),
+                )),
         FFRoute(
             name: ResumenMensualWidget.routeName,
             path: ResumenMensualWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'ResumenMensual')
-                : NavBarPage(
-                    initialPage: 'ResumenMensual',
-                    page: ResumenMensualWidget(),
-                  )),
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: ResumenMensualWidget(),
+                )),
         FFRoute(
             name: ResumeCategoriaWidget.routeName,
             path: ResumeCategoriaWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'ResumeCategoria')
-                : NavBarPage(
-                    initialPage: 'ResumeCategoria',
-                    page: ResumeCategoriaWidget(),
-                  )),
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: ResumeCategoriaWidget(),
+                )),
         FFRoute(
             name: ResumenHistoricoWidget.routeName,
             path: ResumenHistoricoWidget.routePath,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'ResumenHistorico')
-                : NavBarPage(
-                    initialPage: 'ResumenHistorico',
-                    page: ResumenHistoricoWidget(),
-                  ))
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: ResumenHistoricoWidget(),
+                )),
+        FFRoute(
+            name: MetasAhorroWidget.routeName,
+            path: MetasAhorroWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: MetasAhorroWidget(),
+                ))
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 

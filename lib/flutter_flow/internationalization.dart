@@ -1134,6 +1134,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
   },
+  // MetasAhorro
+  {
+    '8ntertnt': {
+      'en': 'Metas de Ahorro',
+      'es': '',
+    },
+    'qj1z20s0': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'ewytv51a': {
+      'en': 'Metas Activas',
+      'es': '',
+    },
+    '9myo5efr': {
+      'en': '',
+      'es': '',
+    },
+    '3g9a81nt': {
+      'en': 'Metas Cumplidas',
+      'es': '',
+    },
+    'rn06nvpv': {
+      'en': '',
+      'es': '',
+    },
+    'djnluawr': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
   // month_picker_dialog
   {
     'kitcrcil': {

@@ -225,7 +225,7 @@ class _PerfildeUsuarioWidgetState extends State<PerfildeUsuarioWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).alternate,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -241,29 +241,25 @@ class _PerfildeUsuarioWidgetState extends State<PerfildeUsuarioWidget>
               context.pop();
             },
           ),
-          title: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
-            child: Text(
-              FFLocalizations.of(context).getText(
-                'apxdysql' /* User´s Profile */,
-              ),
-              style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    font: GoogleFonts.inter(
-                      fontWeight: FlutterFlowTheme.of(context)
-                          .headlineMedium
-                          .fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).headlineMedium.fontStyle,
-                    ),
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    letterSpacing: 0.0,
+          title: Text(
+            FFLocalizations.of(context).getText(
+              'apxdysql' /* User´s Profile */,
+            ),
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
+                  font: GoogleFonts.inter(
                     fontWeight:
                         FlutterFlowTheme.of(context).headlineMedium.fontWeight,
                     fontStyle:
                         FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                   ),
-            ),
+                  color: Color(0xBB000000),
+                  fontSize: 22.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                ),
           ),
           actions: [],
           centerTitle: true,
@@ -348,7 +344,7 @@ class _PerfildeUsuarioWidgetState extends State<PerfildeUsuarioWidget>
                     ),
                     Icon(
                       Icons.account_circle_outlined,
-                      color: FlutterFlowTheme.of(context).primaryText,
+                      color: Color(0xBB000000),
                       size: 100.0,
                     ),
                   ],

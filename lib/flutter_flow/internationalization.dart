@@ -144,33 +144,6 @@ bool _isSupportedLocale(Locale locale) {
 }
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // initial
-  {
-    'pxfeuk07': {
-      'en': 'SmartSavings',
-      'es': 'Ahorros inteligentes',
-    },
-    'd7h63cn1': {
-      'en': 'Expenses',
-      'es': 'Gastos',
-    },
-    '0uznn4nj': {
-      'en': 'Balance',
-      'es': 'Balance',
-    },
-    'kcpcr69v': {
-      'en': 'Income',
-      'es': 'Ingreso',
-    },
-    '6z2w3uwy': {
-      'en': 'Add new',
-      'es': 'Añadir nuevo',
-    },
-    'zt2nzgpp': {
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // report
   {
     'pxio3obv': {
@@ -186,7 +159,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'DETALLES',
     },
     'g0u3eplo': {
-      'en': 'Statistics',
+      'en': 'Stats',
       'es': 'Estadística',
     },
   },
@@ -741,6 +714,424 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7byge8vi': {
       'en': 'Settings',
       'es': 'Hogar',
+    },
+  },
+  // MainPage
+  {
+    'ghny3a8m': {
+      'en': 'Página Principal',
+      'es': '',
+    },
+    'azbojv9q': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'ciopx9q0': {
+      'en': 'Registrar Transacción',
+      'es': '',
+    },
+    'pokpgbki': {
+      'en': 'Categorías',
+      'es': '',
+    },
+    'hes8elfq': {
+      'en': 'Presupuesto',
+      'es': '',
+    },
+    'iqkqu7v4': {
+      'en': 'Estadísticas y Reportes',
+      'es': '',
+    },
+    '489bv5vf': {
+      'en': 'Metas de Ahorro',
+      'es': '',
+    },
+    'd0ur809j': {
+      'en': 'Gestión de Alertas',
+      'es': '',
+    },
+    '5rr88xh3': {
+      'en': 'Sincronizar con la Nube',
+      'es': '',
+    },
+    'iiyrc3bk': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // CategoriaPage
+  {
+    'ddij108r': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    '9tjrw4x8': {
+      'en': 'Crear categoría',
+      'es': '',
+    },
+    'm7aautrm': {
+      'en': 'Categorías',
+      'es': '',
+    },
+    'km7bkpuz': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // CrearCategoriaPage
+  {
+    't1lixowk': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'qiaafl4j': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'fa1x0kh3': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'vozrptl0': {
+      'en': 'Porcentaje',
+      'es': '',
+    },
+    'zwzvf8zh': {
+      'en': 'Procentaje usado',
+      'es': '',
+    },
+    'za256662': {
+      'en': 'Color',
+      'es': '',
+    },
+    '0w28gbwg': {
+      'en': 'Select...',
+      'es': '',
+    },
+    '4jmikidz': {
+      'en': 'Search...',
+      'es': '',
+    },
+    'klgbcsxe': {
+      'en': 'Rojo',
+      'es': '',
+    },
+    'ndb9d8pa': {
+      'en': 'Verde',
+      'es': '',
+    },
+    'a6mzulwf': {
+      'en': 'Amarillo',
+      'es': '',
+    },
+    'd3hz1xvz': {
+      'en': 'Azul',
+      'es': '',
+    },
+    'nxwscjm0': {
+      'en': 'Gris',
+      'es': '',
+    },
+    'ky40uiaw': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    'x4s7e1yc': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    '2948cd55': {
+      'en': 'Crear categoría',
+      'es': '',
+    },
+    'ar6aybgb': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    '602ox0fn': {
+      'en': 'Crear Categorías',
+      'es': '',
+    },
+    'u7bbj4hw': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // EditarCategoriaPage
+  {
+    'hq73frmb': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    's726lfh5': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'z0529trb': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'iy9s5a4n': {
+      'en': 'Porcentaje',
+      'es': '',
+    },
+    'iftau0uw': {
+      'en': 'Porcentaje usado',
+      'es': '',
+    },
+    'hs6fgotm': {
+      'en': 'Color',
+      'es': '',
+    },
+    '75kqdyhm': {
+      'en': 'Seleccione',
+      'es': '',
+    },
+    'w3o4844w': {
+      'en': 'Search...',
+      'es': '',
+    },
+    '4j23yr0b': {
+      'en': 'Rojo',
+      'es': '',
+    },
+    'y9gszw9w': {
+      'en': 'Verde',
+      'es': '',
+    },
+    'bt0k2c3b': {
+      'en': 'Amarillo',
+      'es': '',
+    },
+    'rwxt0ak6': {
+      'en': 'Azul',
+      'es': '',
+    },
+    'p45psbt7': {
+      'en': 'Gris',
+      'es': '',
+    },
+    '5eojpxmy': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    'bx0rab4u': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    '53vrqsjd': {
+      'en': 'Editar categoría',
+      'es': '',
+    },
+    'avq7q6gk': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    'uxiky8qi': {
+      'en': 'Editar Categorías',
+      'es': '',
+    },
+    'vr15lact': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // TransaccionPage
+  {
+    'cc5gj5n9': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'gngiegcm': {
+      'en': '',
+      'es': '',
+    },
+    'scer8xjf': {
+      'en': 'Crear transacción',
+      'es': '',
+    },
+    'os8b4ogr': {
+      'en': 'Transacciones',
+      'es': '',
+    },
+    'uncw6xni': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // CrearTransaccionPage
+  {
+    'ndg73yu8': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'dmfu4gdt': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'dll99w07': {
+      'en': 'Nombre',
+      'es': '',
+    },
+    'wgeoo1jp': {
+      'en': 'Porcentaje',
+      'es': '',
+    },
+    'fcxdwh8z': {
+      'en': 'Procentaje usado',
+      'es': '',
+    },
+    'smih3um0': {
+      'en': 'Color',
+      'es': '',
+    },
+    'im7hpxx2': {
+      'en': 'Select...',
+      'es': '',
+    },
+    'e5vzwhi1': {
+      'en': 'Search...',
+      'es': '',
+    },
+    'gh2367ja': {
+      'en': 'Rojo',
+      'es': '',
+    },
+    '1xbqag01': {
+      'en': 'Verde',
+      'es': '',
+    },
+    'xu0wl2k1': {
+      'en': 'Amarillo',
+      'es': '',
+    },
+    'uskgc983': {
+      'en': 'Azul',
+      'es': '',
+    },
+    'gkohwqwe': {
+      'en': 'Gris',
+      'es': '',
+    },
+    '2fly2xw4': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    '1prora8a': {
+      'en': 'Tipo',
+      'es': '',
+    },
+    '6z52fg0u': {
+      'en': 'Crear categoría',
+      'es': '',
+    },
+    '088rg041': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    '6q78m2ev': {
+      'en': 'Crear Categorías',
+      'es': '',
+    },
+    '7bxj4lnw': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // Estadisticas
+  {
+    '5ia153st': {
+      'en': 'Estadísticas y Reportes',
+      'es': '',
+    },
+    '35s27jql': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'c0ax7k2b': {
+      'en': 'Resumen Mensual',
+      'es': '',
+    },
+    'm8t17lm3': {
+      'en': 'Categorías',
+      'es': '',
+    },
+    'kx7nk5nm': {
+      'en': 'Histórico',
+      'es': '',
+    },
+    'qjo5jlrb': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // ResumenMensual
+  {
+    'gjoby9av': {
+      'en': 'Resumen Mensual',
+      'es': '',
+    },
+    'seixb9o8': {
+      'en': '',
+      'es': '',
+    },
+    'mx7bpzwl': {
+      'en': 'Button',
+      'es': '',
+    },
+    'pvnqyjiw': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    '0w4dx888': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // ResumeCategoria
+  {
+    'xb60b5b8': {
+      'en': 'Resumen Por Categoría',
+      'es': '',
+    },
+    'o9gn4vi7': {
+      'en': '',
+      'es': '',
+    },
+    'qjg8rmdj': {
+      'en': 'Button',
+      'es': '',
+    },
+    'feau829z': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'lq28g4qp': {
+      'en': 'Home',
+      'es': '',
+    },
+  },
+  // ResumenHistorico
+  {
+    '9cgiyqhv': {
+      'en': 'Resumen Histórico',
+      'es': '',
+    },
+    'e6jwfipq': {
+      'en': '',
+      'es': '',
+    },
+    '4doav718': {
+      'en': 'Button',
+      'es': '',
+    },
+    '2r39jn3v': {
+      'en': 'Qué estás buscando?',
+      'es': '',
+    },
+    'cjdeuzi9': {
+      'en': 'Home',
+      'es': '',
     },
   },
   // month_picker_dialog

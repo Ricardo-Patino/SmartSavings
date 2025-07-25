@@ -647,7 +647,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                   }
                                                                   context
                                                                       .pushNamed(
-                                                                    InitialWidget
+                                                                    LoginWidget
                                                                         .routeName,
                                                                     extra: <String,
                                                                         dynamic>{
@@ -733,9 +733,8 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primary,
+                                                              color: Color(
+                                                                  0xFFD89028),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -901,9 +900,8 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primary,
+                                                              color: Color(
+                                                                  0xFFD89028),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)

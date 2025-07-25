@@ -134,21 +134,6 @@ List<int>? getExpenseListForTimestamp(
   return uniqueTimestamps.toList();
 }
 
-List<ExpenseStruct>? getExpensesFromTimestamp(
-  int? timestamp,
-  List<ExpenseStruct>? expenses,
-) {
-  List<ExpenseStruct> matchingExpenses = [];
-
-  for (var record in expenses ?? []) {
-    if (record.date.millisecondsSinceEpoch == timestamp) {
-      matchingExpenses.add(record);
-    }
-  }
-
-  return matchingExpenses;
-}
-
 double? calculateTotalRealAmountFromCategory(
   List<ExpenseStruct> expenses,
   String category,
@@ -164,21 +149,6 @@ double? calculateTotalRealAmountFromCategory(
   }
 
   return totalAmount;
-}
-
-double? sumAmountsForTimestamp(
-  int? timestamp,
-  List<ExpenseStruct>? expenses,
-) {
-  double sum = 0;
-
-  for (var record in expenses ?? []) {
-    if (record.date.millisecondsSinceEpoch == timestamp) {
-      sum += record.amount;
-    }
-  }
-
-  return sum;
 }
 
 String? formatDateOrRelative(int? timestamp) {
@@ -202,19 +172,6 @@ String? formatDateOrRelative(int? timestamp) {
   }
 }
 
-double? adjustAmount(
-  double? amount,
-  String? type,
-) {
-  if (type == "INVOICE") {
-    return (amount ?? 0.0).abs();
-  } else if (type == "EXPENSE") {
-    return -(amount ?? 0.0).abs();
-  } else {
-    return amount;
-  }
-}
-
 List<String>? allMonths(String? languageCode) {
   return List.generate(12, (index) {
     DateTime dateTime = DateTime(DateTime.now().year, index + 1);
@@ -222,21 +179,6 @@ List<String>? allMonths(String? languageCode) {
         DateFormat.MMM(languageCode).format(dateTime).toLowerCase();
     return monthAbbreviation[0].toUpperCase() + monthAbbreviation.substring(1);
   });
-}
-
-double? sumAmountByType(
-  List<ExpenseStruct>? expenses,
-  String? typeReturn,
-) {
-  double sum = 0.0;
-
-  for (var record in expenses ?? []) {
-    if (typeReturn == 'ALL' || record.type == typeReturn) {
-      sum += record.amount;
-    }
-  }
-
-  return sum;
 }
 
 List<String>? allCategories() {
@@ -260,21 +202,6 @@ List<String>? allCategories() {
     'SPORT',
     'TRANSPORTATION',
   ];
-}
-
-List<ExpenseStruct> getExpensesWithinTimestamps(
-  List<ExpenseStruct>? expenses,
-  List<int>? timestamps,
-) {
-  List<ExpenseStruct> matchingExpenses = [];
-
-  for (var record in expenses ?? []) {
-    if (timestamps?.contains(record.date.millisecondsSinceEpoch) == true) {
-      matchingExpenses.add(record);
-    }
-  }
-
-  return matchingExpenses;
 }
 
 List<ExpenseStruct> filterExpenses(
@@ -411,4 +338,41 @@ int filterAndCountExpenseRecords(
   }
 
   return count;
+}
+
+DocumentReference? parseUserDocument(String documentId) {
+  final documentReference =
+      FirebaseFirestore.instance.collection('users').doc(documentId);
+  return documentReference;
+}
+
+Color nombreColorAHex(String colorNombre) {
+  final nombre = colorNombre.trim().toLowerCase();
+
+  final Map<String, String> coloresHex = {
+    'rojo': '#FF0000',
+    'verde': '#02AB02',
+    'amarillo': '#D0BD01',
+    'azul': '#007BEF',
+    'gris': '#616161',
+    'red': '#FF0000',
+    'green': '#02AB02',
+    'yellow': '#D0BD01',
+    'blue': '#007BEF',
+    'gray': '#616161',
+    'grey': '#616161',
+  };
+
+  final hex = coloresHex[nombre] ?? '#000000';
+
+  final hexClean = hex.replaceAll('#', '');
+  final hexFinal = hexClean.length == 6 ? 'FF$hexClean' : hexClean;
+
+  return Color(int.parse(hexFinal, radix: 16));
+}
+
+DocumentReference parseCategoriaDocument(String documentId) {
+  final documentReference =
+      FirebaseFirestore.instance.collection('categoria').doc(documentId);
+  return documentReference;
 }

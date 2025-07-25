@@ -1294,7 +1294,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   }
                                                                   context
                                                                       .pushNamed(
-                                                                    InitialWidget
+                                                                    LoginWidget
                                                                         .routeName,
                                                                     extra: <String,
                                                                         dynamic>{
@@ -1980,7 +1980,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               );
                                                               _navigate = () =>
                                                                   context.goNamedAuth(
-                                                                      InitialWidget
+                                                                      MainPageWidget
                                                                           .routeName,
                                                                       context
                                                                           .mounted);
@@ -2063,9 +2063,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primary,
+                                                          color:
+                                                              Color(0xFFD89028),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2130,7 +2129,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             context.pop();
                                                           }
                                                           context.pushNamed(
-                                                            InitialWidget
+                                                            RecuperarCuentaWidget
                                                                 .routeName,
                                                             extra: <String,
                                                                 dynamic>{

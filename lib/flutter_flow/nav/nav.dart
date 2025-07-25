@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
@@ -88,13 +87,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
         ),
         FFRoute(
-          name: InitialWidget.routeName,
-          path: InitialWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'initial')
-              : InitialWidget(),
-        ),
-        FFRoute(
           name: ReportWidget.routeName,
           path: ReportWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -146,7 +138,95 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'RecuperarCuenta')
               : RecuperarCuentaWidget(),
-        )
+        ),
+        FFRoute(
+            name: MainPageWidget.routeName,
+            path: MainPageWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'MainPage')
+                : NavBarPage(
+                    initialPage: 'MainPage',
+                    page: MainPageWidget(),
+                  )),
+        FFRoute(
+            name: CategoriaPageWidget.routeName,
+            path: CategoriaPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: CategoriaPageWidget(),
+                )),
+        FFRoute(
+            name: CrearCategoriaPageWidget.routeName,
+            path: CrearCategoriaPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: CrearCategoriaPageWidget(),
+                )),
+        FFRoute(
+            name: EditarCategoriaPageWidget.routeName,
+            path: EditarCategoriaPageWidget.routePath,
+            asyncParams: {
+              'categoria': getDoc(['categoria'], CategoriaRecord.fromSnapshot),
+            },
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: EditarCategoriaPageWidget(
+                    categoria: params.getParam(
+                      'categoria',
+                      ParamType.Document,
+                    ),
+                  ),
+                )),
+        FFRoute(
+            name: TransaccionPageWidget.routeName,
+            path: TransaccionPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: TransaccionPageWidget(),
+                )),
+        FFRoute(
+            name: CrearTransaccionPageWidget.routeName,
+            path: CrearTransaccionPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: CrearTransaccionPageWidget(),
+                )),
+        FFRoute(
+            name: EstadisticasWidget.routeName,
+            path: EstadisticasWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'Estadisticas')
+                : NavBarPage(
+                    initialPage: 'Estadisticas',
+                    page: EstadisticasWidget(),
+                  )),
+        FFRoute(
+            name: ResumenMensualWidget.routeName,
+            path: ResumenMensualWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'ResumenMensual')
+                : NavBarPage(
+                    initialPage: 'ResumenMensual',
+                    page: ResumenMensualWidget(),
+                  )),
+        FFRoute(
+            name: ResumeCategoriaWidget.routeName,
+            path: ResumeCategoriaWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'ResumeCategoria')
+                : NavBarPage(
+                    initialPage: 'ResumeCategoria',
+                    page: ResumeCategoriaWidget(),
+                  )),
+        FFRoute(
+            name: ResumenHistoricoWidget.routeName,
+            path: ResumenHistoricoWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'ResumenHistorico')
+                : NavBarPage(
+                    initialPage: 'ResumenHistorico',
+                    page: ResumenHistoricoWidget(),
+                  ))
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 

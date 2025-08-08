@@ -153,7 +153,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                't1lixowk' /* Qué estás buscando? */,
+                                't1lixowk' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -265,7 +265,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'qiaafl4j' /* Nombre */,
+                                'qiaafl4j' /* Name */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -317,7 +317,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'fa1x0kh3' /* Nombre */,
+                                  'fa1x0kh3' /* Name */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -407,7 +407,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'vozrptl0' /* Porcentaje */,
+                                'vozrptl0' /* Percentage */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -459,7 +459,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'zwzvf8zh' /* Procentaje usado */,
+                                  'zwzvf8zh' /* Used Percentage */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -579,19 +579,19 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                   FormFieldController<String>(null),
                               options: [
                                 FFLocalizations.of(context).getText(
-                                  'klgbcsxe' /* Rojo */,
+                                  'klgbcsxe' /* Red */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'ndb9d8pa' /* Verde */,
+                                  'ndb9d8pa' /* Green */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'a6mzulwf' /* Amarillo */,
+                                  'a6mzulwf' /* Yellow */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'd3hz1xvz' /* Azul */,
+                                  'd3hz1xvz' /* Blue */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'nxwscjm0' /* Gris */,
+                                  'nxwscjm0' /* Grey */,
                                 )
                               ],
                               onChanged: (val) => safeSetState(
@@ -618,7 +618,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                '0w28gbwg' /* Select... */,
+                                '0w28gbwg' /* Select. */,
                               ),
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
@@ -651,7 +651,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'ky40uiaw' /* Tipo */,
+                                'ky40uiaw' /* Type */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -703,7 +703,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'x4s7e1yc' /* Tipo */,
+                                  'x4s7e1yc' /* Type */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -854,7 +854,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                         safeSetState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
-                        '2948cd55' /* Crear categoría */,
+                        '2948cd55' /* Create Categorie */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

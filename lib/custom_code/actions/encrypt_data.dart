@@ -11,21 +11,15 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 // fix this error: Action "encryptData" declaration not found.  Are you sure you want to save?
-import 'dart:convert';
-import 'package:crypto/crypto.dart';
+import 'package:encrypt/encrypt.dart' as enc;
 
 Future<String> encryptData(String plainText) async {
-  try {
-    // Convert the plain text to bytes
-    var bytes = utf8.encode(plainText);
+  final key = enc.Key.fromUtf8('6SiAalLRwmOLBF2L3Lt2J4xABzoZfpYG');
+  final iv = enc.IV.fromUtf8('4anux8DhwjFkzICr');
 
-    // Create a SHA-256 hash of the input
-    var digest = sha256.convert(bytes);
+  final encrypter =
+      enc.Encrypter(enc.AES(key, mode: enc.AESMode.cbc, padding: 'PKCS7'));
+  final encrypted = encrypter.encrypt(plainText, iv: iv);
 
-    // Return the hashed string
-    return digest.toString();
-  } catch (e) {
-    // Handle any errors and return empty string or throw exception
-    throw Exception('Failed to encrypt data: $e');
-  }
+  return encrypted.base64;
 }

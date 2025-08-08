@@ -53,7 +53,7 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   late bool loginPasswordVisibility;
   String? Function(BuildContext, String?)? loginPasswordTextControllerValidator;
   // Stores action output result for [Custom Action - encryptData] action in SignInButton widget.
-  String? password;
+  String? passwordLogin;
   // Stores action output result for [Firestore Query - Query a collection] action in SignInButton widget.
   UsersRecord? user;
   // Stores action output result for [Backend Call - API (Create JWT)] action in SignInButton widget.

@@ -73,7 +73,7 @@ class _TransaccionPageWidgetState extends State<TransaccionPageWidget> {
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                'os8b4ogr' /* Transacciones */,
+                'os8b4ogr' /* Transactions */,
               ),
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -140,7 +140,7 @@ class _TransaccionPageWidgetState extends State<TransaccionPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'cc5gj5n9' /* Qué estás buscando? */,
+                                'cc5gj5n9' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -484,7 +484,7 @@ class _TransaccionPageWidgetState extends State<TransaccionPageWidget> {
                         print('CrearButton pressed ...');
                       },
                       text: FFLocalizations.of(context).getText(
-                        'scer8xjf' /* Crear transacción */,
+                        'scer8xjf' /* Create transaction */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

@@ -90,7 +90,7 @@ class _ResumenMensualWidgetState extends State<ResumenMensualWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'gjoby9av' /* Resumen Mensual */,
+              'gjoby9av' /* Monthly Summary */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -179,7 +179,7 @@ class _ResumenMensualWidgetState extends State<ResumenMensualWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'pvnqyjiw' /* Qué estás buscando? */,
+                                'pvnqyjiw' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium

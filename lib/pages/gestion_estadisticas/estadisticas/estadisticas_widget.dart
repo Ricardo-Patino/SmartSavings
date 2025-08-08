@@ -56,7 +56,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '5ia153st' /* Estadísticas y Reportes */,
+              '5ia153st' /* Statistics and Reports */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -121,7 +121,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                '35s27jql' /* Qué estás buscando? */,
+                                '35s27jql' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -240,7 +240,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                 print('ResumenMensualButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'c0ax7k2b' /* Resumen Mensual */,
+                                'c0ax7k2b' /* Monthly Summary */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -289,7 +289,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                     .pushNamed(CategoriaPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'm8t17lm3' /* Categorías */,
+                                'm8t17lm3' /* Categorie */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -337,7 +337,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                 print('HistoricoButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'kx7nk5nm' /* Histórico */,
+                                'kx7nk5nm' /* Historical */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,

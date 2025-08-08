@@ -159,10 +159,10 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'settings': SettingsWidget(),
-      'report': ReportWidget(),
       'MainPage': MainPageWidget(),
       'PerfildeUsuario': PerfildeUsuarioWidget(),
+      'report': ReportWidget(),
+      'settings': SettingsWidget(),
       'RecuperarCuenta': RecuperarCuentaWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -199,7 +199,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.settings,
+                  Icons.house_rounded,
                   color: currentIndex == 0
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -207,7 +207,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'd3mknvvt' /* Settings */,
+                    'iiyrc3bk' /* Home */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -225,7 +225,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.stacked_line_chart,
+                  Icons.account_circle_outlined,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -233,7 +233,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'g0u3eplo' /* Stats */,
+                    'm3e43j1h' /* __ */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -251,7 +251,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.house_rounded,
+                  Icons.stacked_line_chart,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -259,7 +259,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'iiyrc3bk' /* Home */,
+                    'g0u3eplo' /* Stats */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -277,7 +277,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.account_circle_outlined,
+                  Icons.settings,
                   color: currentIndex == 3
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -285,7 +285,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'm3e43j1h' /* __ */,
+                    'd3mknvvt' /* Settings */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -303,7 +303,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.settings_sharp,
+                  Icons.key,
                   color: currentIndex == 4
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -311,7 +311,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '7byge8vi' /* Settings */,
+                    '7byge8vi' /* Recover Account */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(

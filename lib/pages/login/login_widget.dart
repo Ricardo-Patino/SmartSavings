@@ -1896,12 +1896,11 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         onPressed: () async {
                                                           Function() _navigate =
                                                               () {};
-                                                          // EncryptPassword
-                                                          _model.password =
+                                                          _model.passwordLogin =
                                                               await actions
                                                                   .encryptData(
                                                             _model
-                                                                .passwordInputTextController
+                                                                .loginPasswordTextController
                                                                 .text,
                                                           );
                                                           // GetUser
@@ -1919,7 +1918,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                         .where(
                                                                           'password',
                                                                           isEqualTo:
-                                                                              _model.password,
+                                                                              _model.passwordLogin,
                                                                         ),
                                                             singleRecord: true,
                                                           ).then((s) => s

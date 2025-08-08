@@ -90,7 +90,7 @@ class _ResumeCategoriaWidgetState extends State<ResumeCategoriaWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'xb60b5b8' /* Resumen Por Categoría */,
+              'xb60b5b8' /* Summary by Category */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -179,7 +179,7 @@ class _ResumeCategoriaWidgetState extends State<ResumeCategoriaWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'feau829z' /* Qué estás buscando? */,
+                                'feau829z' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium

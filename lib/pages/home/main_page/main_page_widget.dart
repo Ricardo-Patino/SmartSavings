@@ -56,7 +56,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'ghny3a8m' /* Página Principal */,
+              'ghny3a8m' /* Main Page */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -121,7 +121,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'azbojv9q' /* Qué estás buscando? */,
+                                'azbojv9q' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -240,7 +240,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('RegistrarButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'ciopx9q0' /* Registrar Transacción */,
+                                'ciopx9q0' /* Register Transation */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -289,7 +289,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                     .pushNamed(CategoriaPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'pokpgbki' /* Categorías */,
+                                'pokpgbki' /* Categories */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -337,7 +337,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('PresupuestoButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'hes8elfq' /* Presupuesto */,
+                                'hes8elfq' /* Budget */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -385,7 +385,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('EstadisticasButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'iqkqu7v4' /* Estadísticas y Reportes */,
+                                'iqkqu7v4' /* Statistics and Reports */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -433,7 +433,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('MetasButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                '489bv5vf' /* Metas de Ahorro */,
+                                '489bv5vf' /* Savings Goals */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -481,7 +481,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('AlertasButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'd0ur809j' /* Gestión de Alertas */,
+                                'd0ur809j' /* Alert Management */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -529,7 +529,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 print('SincronizarButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                '5rr88xh3' /* Sincronizar con la Nube */,
+                                '5rr88xh3' /* Cloud Sync */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,

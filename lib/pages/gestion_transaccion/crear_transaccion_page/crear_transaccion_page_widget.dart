@@ -87,7 +87,7 @@ class _CrearTransaccionPageWidgetState
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                '6q78m2ev' /* Crear Categorías */,
+                '6q78m2ev' /* Create Categorie */,
               ),
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -154,7 +154,7 @@ class _CrearTransaccionPageWidgetState
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'ndg73yu8' /* Qué estás buscando? */,
+                                'ndg73yu8' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -266,7 +266,7 @@ class _CrearTransaccionPageWidgetState
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'dmfu4gdt' /* Nombre */,
+                                'dmfu4gdt' /* Name */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -318,7 +318,7 @@ class _CrearTransaccionPageWidgetState
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'dll99w07' /* Nombre */,
+                                  'dll99w07' /* Name */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -408,7 +408,7 @@ class _CrearTransaccionPageWidgetState
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'wgeoo1jp' /* Porcentaje */,
+                                'wgeoo1jp' /* Percentage */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -460,7 +460,7 @@ class _CrearTransaccionPageWidgetState
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'fcxdwh8z' /* Procentaje usado */,
+                                  'fcxdwh8z' /* Used Percentage */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -580,19 +580,19 @@ class _CrearTransaccionPageWidgetState
                                   FormFieldController<String>(null),
                               options: [
                                 FFLocalizations.of(context).getText(
-                                  'gh2367ja' /* Rojo */,
+                                  'gh2367ja' /* Red */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  '1xbqag01' /* Verde */,
+                                  '1xbqag01' /* Green */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'xu0wl2k1' /* Amarillo */,
+                                  'xu0wl2k1' /* Yellow */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'uskgc983' /* Azul */,
+                                  'uskgc983' /* Blue */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'gkohwqwe' /* Gris */,
+                                  'gkohwqwe' /* Grey */,
                                 )
                               ],
                               onChanged: (val) => safeSetState(
@@ -652,7 +652,7 @@ class _CrearTransaccionPageWidgetState
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                '2fly2xw4' /* Tipo */,
+                                '2fly2xw4' /* Type */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -704,7 +704,7 @@ class _CrearTransaccionPageWidgetState
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  '1prora8a' /* Tipo */,
+                                  '1prora8a' /* Type */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -855,7 +855,7 @@ class _CrearTransaccionPageWidgetState
                         safeSetState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
-                        '6z52fg0u' /* Crear categoría */,
+                        '6z52fg0u' /* Create Categorie */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
@@ -901,7 +901,7 @@ class _CrearTransaccionPageWidgetState
                         context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
-                        '088rg041' /* Cancelar */,
+                        '088rg041' /* Cancel */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

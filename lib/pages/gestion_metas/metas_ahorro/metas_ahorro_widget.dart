@@ -121,7 +121,7 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'qj1z20s0' /* Qué estás buscando? */,
+                                'qj1z20s0' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -240,7 +240,7 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                                 print('ActivasButton pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'ewytv51a' /* Metas Activas */,
+                                'ewytv51a' /* Active Goals */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -334,7 +334,7 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                                     .pushNamed(CategoriaPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
-                                '3g9a81nt' /* Metas Cumplidas */,
+                                '3g9a81nt' /* Goals Accomplished */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,

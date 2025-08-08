@@ -160,7 +160,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g0u3eplo': {
       'en': 'Stats',
-      'es': 'Estadística',
+      'es': 'Estadísticas',
     },
   },
   // settings
@@ -171,11 +171,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'r3tu0ri4': {
       'en': 'SmartSavingTest',
-      'es': 'Joe Doe',
+      'es': 'PruebaSmartSaving',
     },
     'cypi8362': {
-      'en': 'test@samrtsavings.com',
-      'es': 'prueba@samrtsavings.com',
+      'en': 'test@smartsavings.com',
+      'es': 'test@smartsavings.com',
     },
     'z6l4z05o': {
       'en': 'Choose language',
@@ -206,8 +206,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Cerrar sesión',
     },
     'ayj7zciz': {
-      'en': 'Do you really want to get out of Kitty?',
-      'es': '¿De verdad quieres salir de Kitty?',
+      'en': 'Do you really want to get out of SmartSavings?',
+      'es': '¿De verdad quieres salir de SmartSavings?',
     },
     'u77kd0xv': {
       'en': 'Cancel',
@@ -298,11 +298,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qkpmudg0': {
       'en': 'Laundry',
-      'es': 'Lavadero',
+      'es': 'Lavandería',
     },
     '41nxlk99': {
       'en': 'Liquor',
-      'es': 'Espíritu',
+      'es': 'Licor',
     },
     'y76rocai': {
       'en': 'Maintenance',
@@ -350,7 +350,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'c842khfl': {
       'en': 'Invalid value for Amount. Ex: 90.50',
-      'es': 'Valor no válido para el importe. Ejemplo: 90,50',
+      'es': 'Valor iválido para el importe. Ejemplo: 90,50',
     },
     'bcchv2ht': {
       'en': 'Please choose an option from the dropdown',
@@ -377,21 +377,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'qggdbtg4': {
       'en': 'Smart\$avings',
-      'es': 'Ahorros inteligentes',
+      'es': 'Smart\$avings',
     },
     'kxiutu7a': {
       'en': 'Create Account',
-      'es': 'Crear una cuenta',
+      'es': 'Crear Cuenta',
     },
     '8onoh62b': {
       'en': 'Create Account',
-      'es': 'Crear una cuenta',
+      'es': 'Crear Cuenta',
     },
     'amao6idu': {
       'en':
           'Get started by creating your account manage on multiple devices anytime! ',
       'es':
-          '¡Comienza creando tu cuenta para proteger tus datos y administrarlos en múltiples dispositivos en cualquier momento!',
+          '¡Empieza creando tu cuenta y administrándola en múltiples dispositivos en cualquier momento!',
     },
     'j4h5pupr': {
       'en': '',
@@ -427,11 +427,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4ibkmwx7': {
       'en': 'Create Account',
-      'es': 'Crear una cuenta',
+      'es': 'Crear Cuenta',
     },
     'u6qfqqol': {
       'en': 'Log In',
-      'es': 'Acceso',
+      'es': 'Log In',
     },
     'czaqm8sx': {
       'en': 'Welcome Back',
@@ -541,11 +541,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'yva1sh8h': {
       'en': 'Laundry',
-      'es': 'Lavadero',
+      'es': 'Lavandería',
     },
     'nu1fvykc': {
       'en': 'Liquor',
-      'es': 'Espíritu',
+      'es': 'Licor',
     },
     'bv3dr91r': {
       'en': 'Maintenance',
@@ -640,56 +640,56 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ow9023ah': {
       'en': 'Log Out',
-      'es': '',
+      'es': 'Finalizar la sesión',
     },
     'd5ox2g9q': {
       'en': 'User´s Name',
-      'es': '',
+      'es': 'Nombre de usuario',
     },
     'pq0004sk': {
       'en': 'test@smartsavings.com',
-      'es': '',
+      'es': 'test@smartsavings.com',
     },
     'olzd7fic': {
       'en': 'Active',
-      'es': '',
+      'es': 'Activo',
     },
     'elvretnm': {
       'en': 'Edit Profile',
-      'es': '',
+      'es': 'Editar perfil',
     },
     'rs7yh16p': {
       'en': 'Account Settings',
-      'es': '',
+      'es': 'Configuraciones de la cuenta',
     },
     'apxdysql': {
       'en': 'User´s Profile',
-      'es': 'Perfil de Usuario',
+      'es': 'Perfil del usuario',
     },
     'm3e43j1h': {
       'en': '__',
-      'es': '',
+      'es': '__',
     },
   },
   // RecuperarCuenta
   {
     'yye6rchf': {
       'en': 'Recover your Account',
-      'es': 'Recuperar la Cuenta',
+      'es': 'Recupera tu cuenta',
     },
     'glv2fwtw': {
       'en': 'Account Recovery',
-      'es': 'Recuperar cuenta',
+      'es': 'Recuperación de cuenta',
     },
     '57y9rke6': {
       'en': 'Recover your Account',
-      'es': 'Recupera la cuenta',
+      'es': 'Recupera tu cuenta',
     },
     'aw6f1y64': {
       'en':
           'Enter your email address to receive an email containing a temporary password',
       'es':
-          'Introduce tu correo electrónico para enviarte un email con una contraseña temporal.',
+          'Introduzca su dirección de correo electrónico para recibir un correo electrónico con una contraseña temporal',
     },
     'uo61elkz': {
       'en': '',
@@ -701,375 +701,375 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0wbdnkmn': {
       'en': 'Send Password',
-      'es': 'Enviar Contraseña',
+      'es': 'Enviar contraseña',
     },
     'bstwbuvq': {
       'en': 'Not an active user? Sign up.',
-      'es': 'No es un usuario activo? Registrarse.',
+      'es': '¿No eres un usuario activo? Regístrate.',
     },
     '16dr7ewz': {
       'en': 'Create Account',
       'es': 'Crear una cuenta',
     },
     '7byge8vi': {
-      'en': 'Settings',
-      'es': 'Hogar',
+      'en': 'Recover Account',
+      'es': 'Recuperar cuenta',
     },
   },
   // MainPage
   {
     'ghny3a8m': {
-      'en': 'Página Principal',
-      'es': '',
+      'en': 'Main Page',
+      'es': 'Página principal',
     },
     'azbojv9q': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'ciopx9q0': {
-      'en': 'Registrar Transacción',
-      'es': '',
+      'en': 'Register Transation',
+      'es': 'Registrador Transacción',
     },
     'pokpgbki': {
-      'en': 'Categorías',
-      'es': '',
+      'en': 'Categories',
+      'es': 'Categorías',
     },
     'hes8elfq': {
-      'en': 'Presupuesto',
-      'es': '',
+      'en': 'Budget',
+      'es': 'Presupuesto',
     },
     'iqkqu7v4': {
-      'en': 'Estadísticas y Reportes',
-      'es': '',
+      'en': 'Statistics and Reports',
+      'es': 'Estadísticas y informes',
     },
     '489bv5vf': {
-      'en': 'Metas de Ahorro',
-      'es': '',
+      'en': 'Savings Goals',
+      'es': 'Metas de Ahorro',
     },
     'd0ur809j': {
-      'en': 'Gestión de Alertas',
-      'es': '',
+      'en': 'Alert Management',
+      'es': 'Gestión de Alertas',
     },
     '5rr88xh3': {
-      'en': 'Sincronizar con la Nube',
-      'es': '',
+      'en': 'Cloud Sync',
+      'es': 'Sincronizar con la nube',
     },
     'iiyrc3bk': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // CategoriaPage
   {
     'ddij108r': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     '9tjrw4x8': {
-      'en': 'Crear categoría',
-      'es': '',
+      'en': 'Create Categorie',
+      'es': 'Crear una categoría',
     },
     'm7aautrm': {
-      'en': 'Categorías',
-      'es': '',
+      'en': 'Categories',
+      'es': 'Categorías',
     },
     'km7bkpuz': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // CrearCategoriaPage
   {
     't1lixowk': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'qiaafl4j': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'fa1x0kh3': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'vozrptl0': {
-      'en': 'Porcentaje',
-      'es': '',
+      'en': 'Percentage',
+      'es': 'Porcentaje',
     },
     'zwzvf8zh': {
-      'en': 'Procentaje usado',
-      'es': '',
+      'en': 'Used Percentage',
+      'es': 'Porcentaje usado',
     },
     'za256662': {
       'en': 'Color',
-      'es': '',
+      'es': 'Color',
     },
     '0w28gbwg': {
-      'en': 'Select...',
-      'es': '',
+      'en': 'Select.',
+      'es': 'Seleccionar.',
     },
     '4jmikidz': {
       'en': 'Search...',
-      'es': '',
+      'es': 'Buscar...',
     },
     'klgbcsxe': {
-      'en': 'Rojo',
-      'es': '',
+      'en': 'Red',
+      'es': 'Rojo',
     },
     'ndb9d8pa': {
-      'en': 'Verde',
-      'es': '',
+      'en': 'Green',
+      'es': 'Verde',
     },
     'a6mzulwf': {
-      'en': 'Amarillo',
-      'es': '',
+      'en': 'Yellow',
+      'es': 'Amarillo',
     },
     'd3hz1xvz': {
-      'en': 'Azul',
-      'es': '',
+      'en': 'Blue',
+      'es': 'Azul',
     },
     'nxwscjm0': {
-      'en': 'Gris',
-      'es': '',
+      'en': 'Grey',
+      'es': 'Gris',
     },
     'ky40uiaw': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     'x4s7e1yc': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     '2948cd55': {
-      'en': 'Crear categoría',
-      'es': '',
+      'en': 'Create Categorie',
+      'es': 'Crear una categoría',
     },
     'ar6aybgb': {
       'en': 'Cancelar',
-      'es': '',
+      'es': 'Cancelar',
     },
     '602ox0fn': {
       'en': 'Crear Categorías',
-      'es': '',
+      'es': 'Crear categorías',
     },
     'u7bbj4hw': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // EditarCategoriaPage
   {
     'hq73frmb': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     's726lfh5': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'z0529trb': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'iy9s5a4n': {
-      'en': 'Porcentaje',
-      'es': '',
+      'en': 'Percentage',
+      'es': 'Porcentaje',
     },
     'iftau0uw': {
-      'en': 'Porcentaje usado',
-      'es': '',
+      'en': 'Used Percentage',
+      'es': 'Porcentaje usado',
     },
     'hs6fgotm': {
       'en': 'Color',
-      'es': '',
+      'es': 'Color',
     },
     '75kqdyhm': {
-      'en': 'Seleccione',
-      'es': '',
+      'en': 'Select',
+      'es': 'Seleccionar',
     },
     'w3o4844w': {
       'en': 'Search...',
-      'es': '',
+      'es': 'Buscar...',
     },
     '4j23yr0b': {
-      'en': 'Rojo',
-      'es': '',
+      'en': 'Red',
+      'es': 'Rojo',
     },
     'y9gszw9w': {
-      'en': 'Verde',
-      'es': '',
+      'en': 'Green',
+      'es': 'Verde',
     },
     'bt0k2c3b': {
-      'en': 'Amarillo',
-      'es': '',
+      'en': 'Yellow',
+      'es': 'Amarillo',
     },
     'rwxt0ak6': {
-      'en': 'Azul',
-      'es': '',
+      'en': 'Blue',
+      'es': 'Azul',
     },
     'p45psbt7': {
-      'en': 'Gris',
-      'es': '',
+      'en': 'Grey',
+      'es': 'Gris',
     },
     '5eojpxmy': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     'bx0rab4u': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     '53vrqsjd': {
-      'en': 'Editar categoría',
-      'es': '',
+      'en': 'Edit  Categorie',
+      'es': 'Editar categoría',
     },
     'avq7q6gk': {
-      'en': 'Cancelar',
-      'es': '',
+      'en': 'Cancel',
+      'es': 'Cancelar',
     },
     'uxiky8qi': {
-      'en': 'Editar Categorías',
-      'es': '',
+      'en': 'Edit  Categorie',
+      'es': 'Editar Categorías',
     },
     'vr15lact': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // TransaccionPage
   {
     'cc5gj5n9': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'gngiegcm': {
       'en': '',
       'es': '',
     },
     'scer8xjf': {
-      'en': 'Crear transacción',
-      'es': '',
+      'en': 'Create transaction',
+      'es': 'Crear transacción',
     },
     'os8b4ogr': {
-      'en': 'Transacciones',
-      'es': '',
+      'en': 'Transactions',
+      'es': 'Transacciones',
     },
     'uncw6xni': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // CrearTransaccionPage
   {
     'ndg73yu8': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'dmfu4gdt': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'dll99w07': {
-      'en': 'Nombre',
-      'es': '',
+      'en': 'Name',
+      'es': 'Nombre',
     },
     'wgeoo1jp': {
-      'en': 'Porcentaje',
-      'es': '',
+      'en': 'Percentage',
+      'es': 'Porcentaje',
     },
     'fcxdwh8z': {
-      'en': 'Procentaje usado',
-      'es': '',
+      'en': 'Used Percentage',
+      'es': 'Porcentaje usado',
     },
     'smih3um0': {
       'en': 'Color',
-      'es': '',
+      'es': 'Color',
     },
     'im7hpxx2': {
       'en': 'Select...',
-      'es': '',
+      'es': 'Seleccionar...',
     },
     'e5vzwhi1': {
       'en': 'Search...',
-      'es': '',
+      'es': 'Buscar...',
     },
     'gh2367ja': {
-      'en': 'Rojo',
-      'es': '',
+      'en': 'Red',
+      'es': 'Rojo',
     },
     '1xbqag01': {
-      'en': 'Verde',
-      'es': '',
+      'en': 'Green',
+      'es': 'Verde',
     },
     'xu0wl2k1': {
-      'en': 'Amarillo',
-      'es': '',
+      'en': 'Yellow',
+      'es': 'Amarillo',
     },
     'uskgc983': {
-      'en': 'Azul',
-      'es': '',
+      'en': 'Blue',
+      'es': 'Azul',
     },
     'gkohwqwe': {
-      'en': 'Gris',
-      'es': '',
+      'en': 'Grey',
+      'es': 'Gris',
     },
     '2fly2xw4': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     '1prora8a': {
-      'en': 'Tipo',
-      'es': '',
+      'en': 'Type',
+      'es': 'Tipo',
     },
     '6z52fg0u': {
-      'en': 'Crear categoría',
-      'es': '',
+      'en': 'Create Categorie',
+      'es': 'Crear una categoría',
     },
     '088rg041': {
-      'en': 'Cancelar',
-      'es': '',
+      'en': 'Cancel',
+      'es': 'Cancelar',
     },
     '6q78m2ev': {
-      'en': 'Crear Categorías',
-      'es': '',
+      'en': 'Create Categorie',
+      'es': 'Crear categorías',
     },
     '7bxj4lnw': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // Estadisticas
   {
     '5ia153st': {
-      'en': 'Estadísticas y Reportes',
-      'es': '',
+      'en': 'Statistics and Reports',
+      'es': 'Estadísticas y informes',
     },
     '35s27jql': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'c0ax7k2b': {
-      'en': 'Resumen Mensual',
-      'es': '',
+      'en': 'Monthly Summary',
+      'es': 'Resumen mensual',
     },
     'm8t17lm3': {
-      'en': 'Categorías',
-      'es': '',
+      'en': 'Categorie',
+      'es': 'Categorías',
     },
     'kx7nk5nm': {
-      'en': 'Histórico',
-      'es': '',
+      'en': 'Historical',
+      'es': 'Histórico',
     },
     'qjo5jlrb': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // ResumenMensual
   {
     'gjoby9av': {
-      'en': 'Resumen Mensual',
-      'es': '',
+      'en': 'Monthly Summary',
+      'es': 'Resumen mensual',
     },
     'seixb9o8': {
       'en': '',
@@ -1077,22 +1077,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mx7bpzwl': {
       'en': 'Button',
-      'es': '',
+      'es': 'Botón',
     },
     'pvnqyjiw': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     '0w4dx888': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // ResumeCategoria
   {
     'xb60b5b8': {
-      'en': 'Resumen Por Categoría',
-      'es': '',
+      'en': 'Summary by Category',
+      'es': 'Resumen Por Categoría',
     },
     'o9gn4vi7': {
       'en': '',
@@ -1100,22 +1100,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qjg8rmdj': {
       'en': 'Button',
-      'es': '',
+      'es': 'Botón',
     },
     'feau829z': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'lq28g4qp': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // ResumenHistorico
   {
     '9cgiyqhv': {
-      'en': 'Resumen Histórico',
-      'es': '',
+      'en': 'Historical Summary',
+      'es': 'Resumen histórico',
     },
     'e6jwfipq': {
       'en': '',
@@ -1123,38 +1123,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4doav718': {
       'en': 'Button',
-      'es': '',
+      'es': 'Botón',
     },
     '2r39jn3v': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'cjdeuzi9': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // MetasAhorro
   {
     '8ntertnt': {
       'en': 'Metas de Ahorro',
-      'es': '',
+      'es': 'Metas de Ahorro',
     },
     'qj1z20s0': {
-      'en': 'Qué estás buscando?',
-      'es': '',
+      'en': 'What are you searching?',
+      'es': '¿Qué estás buscando?',
     },
     'ewytv51a': {
-      'en': 'Metas Activas',
-      'es': '',
+      'en': 'Active Goals',
+      'es': 'Metas Activas',
     },
     '9myo5efr': {
       'en': '',
       'es': '',
     },
     '3g9a81nt': {
-      'en': 'Metas Cumplidas',
-      'es': '',
+      'en': 'Goals Accomplished',
+      'es': 'Metas cumplidas',
     },
     'rn06nvpv': {
       'en': '',
@@ -1162,7 +1162,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'djnluawr': {
       'en': 'Home',
-      'es': '',
+      'es': 'Hogar',
     },
   },
   // month_picker_dialog
@@ -1180,7 +1180,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '6qw7pk5q': {
       'en': 'SS',
-      'es': 'Yo',
+      'es': 'SS',
     },
   },
   // bottomsheet_change_language

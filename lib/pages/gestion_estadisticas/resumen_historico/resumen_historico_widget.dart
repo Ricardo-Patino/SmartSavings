@@ -90,7 +90,7 @@ class _ResumenHistoricoWidgetState extends State<ResumenHistoricoWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              '9cgiyqhv' /* Resumen Histórico */,
+              '9cgiyqhv' /* Historical Summary */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -179,7 +179,7 @@ class _ResumenHistoricoWidgetState extends State<ResumenHistoricoWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                '2r39jn3v' /* Qué estás buscando? */,
+                                '2r39jn3v' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium

@@ -74,7 +74,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                'm7aautrm' /* Categorías */,
+                'm7aautrm' /* Categories */,
               ),
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -141,7 +141,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'ddij108r' /* Qué estás buscando? */,
+                                'ddij108r' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -525,7 +525,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                         context.pushNamed(CrearCategoriaPageWidget.routeName);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '9tjrw4x8' /* Crear categoría */,
+                        '9tjrw4x8' /* Create Categorie */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

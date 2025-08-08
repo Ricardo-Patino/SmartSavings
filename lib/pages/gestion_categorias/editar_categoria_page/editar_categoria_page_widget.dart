@@ -92,7 +92,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                'uxiky8qi' /* Editar Categorías */,
+                'uxiky8qi' /* Edit  Categorie */,
               ),
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -159,7 +159,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                'hq73frmb' /* Qué estás buscando? */,
+                                'hq73frmb' /* What are you searching? */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -271,7 +271,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                's726lfh5' /* Nombre */,
+                                's726lfh5' /* Name */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -323,7 +323,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'z0529trb' /* Nombre */,
+                                  'z0529trb' /* Name */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -413,7 +413,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'iy9s5a4n' /* Porcentaje */,
+                                'iy9s5a4n' /* Percentage */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -465,7 +465,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'iftau0uw' /* Porcentaje usado */,
+                                  'iftau0uw' /* Used Percentage */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -588,19 +588,19 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                               ),
                               options: [
                                 FFLocalizations.of(context).getText(
-                                  '4j23yr0b' /* Rojo */,
+                                  '4j23yr0b' /* Red */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'y9gszw9w' /* Verde */,
+                                  'y9gszw9w' /* Green */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'bt0k2c3b' /* Amarillo */,
+                                  'bt0k2c3b' /* Yellow */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'rwxt0ak6' /* Azul */,
+                                  'rwxt0ak6' /* Blue */,
                                 ),
                                 FFLocalizations.of(context).getText(
-                                  'p45psbt7' /* Gris */,
+                                  'p45psbt7' /* Grey */,
                                 )
                               ],
                               onChanged: (val) => safeSetState(
@@ -627,7 +627,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                                         .fontStyle,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
-                                '75kqdyhm' /* Seleccione */,
+                                '75kqdyhm' /* Select */,
                               ),
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
@@ -660,7 +660,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                '5eojpxmy' /* Tipo */,
+                                '5eojpxmy' /* Type */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -712,7 +712,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'bx0rab4u' /* Tipo */,
+                                  'bx0rab4u' /* Type */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -829,7 +829,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                         context.pushNamed(CategoriaPageWidget.routeName);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '53vrqsjd' /* Editar categoría */,
+                        '53vrqsjd' /* Edit  Categorie */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
@@ -875,7 +875,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                         context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
-                        'avq7q6gk' /* Cancelar */,
+                        'avq7q6gk' /* Cancel */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

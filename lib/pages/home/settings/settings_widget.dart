@@ -175,7 +175,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'cypi8362' /* test@samrtsavings.com */,
+                                                    'cypi8362' /* test@smartsavings.com */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)

@@ -69,7 +69,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                 size: 24.0,
               ),
               onPressed: () async {
-                context.safePop();
+                context.pushNamed(MainPageWidget.routeName);
               },
             ),
             title: Text(
@@ -253,7 +253,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(5.0),
                               child: StreamBuilder<List<CategoriaRecord>>(
                                 stream: queryCategoriaRecord(
                                   queryBuilder: (categoriaRecord) =>
@@ -284,225 +284,205 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                                       categoriaListCategoriaRecordList =
                                       snapshot.data!;
 
-                                  return ReorderableListView.builder(
+                                  return ListView.separated(
                                     padding: EdgeInsets.zero,
-                                    proxyDecorator: (Widget child, int index,
-                                            Animation<double> animation) =>
-                                        Material(
-                                            color: Colors.transparent,
-                                            child: child),
                                     shrinkWrap: true,
                                     scrollDirection: Axis.vertical,
                                     itemCount:
                                         categoriaListCategoriaRecordList.length,
+                                    separatorBuilder: (_, __) =>
+                                        SizedBox(height: 5.0),
                                     itemBuilder: (context, categoriaListIndex) {
                                       final categoriaListCategoriaRecord =
                                           categoriaListCategoriaRecordList[
                                               categoriaListIndex];
-                                      return Container(
-                                        key: ValueKey("ListView_9kddf8gj" +
-                                            '_' +
-                                            categoriaListIndex.toString()),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              width: 25.0,
-                                              height: 25.0,
-                                              decoration: BoxDecoration(
-                                                color: functions.nombreColorAHex(
-                                                    categoriaListCategoriaRecord
-                                                        .color),
-                                                shape: BoxShape.circle,
-                                              ),
+                                      return Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          Container(
+                                            width: 25.0,
+                                            height: 25.0,
+                                            decoration: BoxDecoration(
+                                              color: functions.nombreColorAHex(
+                                                  categoriaListCategoriaRecord
+                                                      .color),
+                                              shape: BoxShape.circle,
                                             ),
-                                            Text(
-                                              categoriaListCategoriaRecord
-                                                  .nombre
-                                                  .maybeHandleOverflow(
-                                                maxChars: 20,
-                                                replacement: '…',
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                          ),
+                                          Text(
+                                            categoriaListCategoriaRecord.nombre
+                                                .maybeHandleOverflow(
+                                              maxChars: 20,
+                                              replacement: '…',
                                             ),
-                                            Text(
-                                              categoriaListCategoriaRecord
-                                                  .porcentaje
-                                                  .toString(),
-                                              style:
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                          ),
+                                          Text(
+                                            '${categoriaListCategoriaRecord.porcentaje.toString()}%',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                          ),
+                                          FlutterFlowIconButton(
+                                            borderRadius: 8.0,
+                                            buttonSize: 40.0,
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .success,
+                                            icon: Icon(
+                                              Icons.edit_outlined,
+                                              color:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                                      .info,
+                                              size: 24.0,
                                             ),
-                                            Text(
-                                              categoriaListCategoriaRecord.tipo,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                            ),
-                                            FlutterFlowIconButton(
-                                              borderRadius: 8.0,
-                                              buttonSize: 40.0,
-                                              fillColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .success,
-                                              icon: Icon(
-                                                Icons.edit_outlined,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .info,
-                                                size: 24.0,
-                                              ),
-                                              onPressed: () async {
-                                                context.pushNamed(
-                                                  EditarCategoriaPageWidget
-                                                      .routeName,
-                                                  queryParameters: {
-                                                    'categoria': serializeParam(
+                                            onPressed: () async {
+                                              context.pushNamed(
+                                                EditarCategoriaPageWidget
+                                                    .routeName,
+                                                queryParameters: {
+                                                  'categoria': serializeParam(
+                                                    categoriaListCategoriaRecord,
+                                                    ParamType.Document,
+                                                  ),
+                                                }.withoutNulls,
+                                                extra: <String, dynamic>{
+                                                  'categoria':
                                                       categoriaListCategoriaRecord,
-                                                      ParamType.Document,
-                                                    ),
-                                                  }.withoutNulls,
-                                                  extra: <String, dynamic>{
-                                                    'categoria':
-                                                        categoriaListCategoriaRecord,
-                                                  },
-                                                );
-                                              },
-                                            ),
-                                            FlutterFlowIconButton(
-                                              borderRadius: 8.0,
-                                              buttonSize: 40.0,
-                                              fillColor:
+                                                },
+                                              );
+                                            },
+                                          ),
+                                          FlutterFlowIconButton(
+                                            borderRadius: 8.0,
+                                            buttonSize: 40.0,
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .error,
+                                            icon: Icon(
+                                              Icons.delete_outline,
+                                              color:
                                                   FlutterFlowTheme.of(context)
-                                                      .error,
-                                              icon: Icon(
-                                                Icons.delete_outline,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .info,
-                                                size: 24.0,
-                                              ),
-                                              onPressed: () async {
-                                                var confirmDialogResponse =
-                                                    await showDialog<bool>(
-                                                          context: context,
-                                                          builder:
-                                                              (alertDialogContext) {
-                                                            return AlertDialog(
-                                                              title: Text(
-                                                                  'Borrar categoría'),
-                                                              content: Text(
-                                                                  'Está seguro de borrar esta categoría?'),
-                                                              actions: [
-                                                                TextButton(
-                                                                  onPressed: () =>
-                                                                      Navigator.pop(
-                                                                          alertDialogContext,
-                                                                          false),
-                                                                  child: Text(
-                                                                      'Cancelar'),
-                                                                ),
-                                                                TextButton(
-                                                                  onPressed: () =>
-                                                                      Navigator.pop(
-                                                                          alertDialogContext,
-                                                                          true),
-                                                                  child: Text(
-                                                                      'Confirmar'),
-                                                                ),
-                                                              ],
-                                                            );
-                                                          },
-                                                        ) ??
-                                                        false;
+                                                      .info,
+                                              size: 24.0,
+                                            ),
+                                            onPressed: () async {
+                                              var confirmDialogResponse =
+                                                  await showDialog<bool>(
+                                                        context: context,
+                                                        builder:
+                                                            (alertDialogContext) {
+                                                          return AlertDialog(
+                                                            title: Text(
+                                                                'Borrar categoría'),
+                                                            content: Text(
+                                                                'Está seguro de borrar esta categoría?'),
+                                                            actions: [
+                                                              TextButton(
+                                                                onPressed: () =>
+                                                                    Navigator.pop(
+                                                                        alertDialogContext,
+                                                                        false),
+                                                                child: Text(
+                                                                    'Cancelar'),
+                                                              ),
+                                                              TextButton(
+                                                                onPressed: () =>
+                                                                    Navigator.pop(
+                                                                        alertDialogContext,
+                                                                        true),
+                                                                child: Text(
+                                                                    'Confirmar'),
+                                                              ),
+                                                            ],
+                                                          );
+                                                        },
+                                                      ) ??
+                                                      false;
+                                              if (confirmDialogResponse) {
                                                 await categoriaListCategoriaRecord
                                                     .reference
                                                     .delete();
-                                              },
-                                            ),
-                                          ].divide(SizedBox(width: 5.0)),
-                                        ),
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Text(
+                                                      'Categorie deleted',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                      ),
+                                                    ),
+                                                    duration: Duration(
+                                                        milliseconds: 4000),
+                                                    backgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondary,
+                                                  ),
+                                                );
+                                              } else {
+                                                return;
+                                              }
+                                            },
+                                          ),
+                                        ].divide(SizedBox(width: 5.0)),
                                       );
                                     },
-                                    onReorder: (int reorderableOldIndex,
-                                        int reorderableNewIndex) async {},
                                   );
                                 },
                               ),
@@ -525,7 +505,7 @@ class _CategoriaPageWidgetState extends State<CategoriaPageWidget> {
                         context.pushNamed(CrearCategoriaPageWidget.routeName);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '9tjrw4x8' /* Create Categorie */,
+                        '9tjrw4x8' /* Create Category */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

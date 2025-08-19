@@ -1,3 +1,4 @@
+import '/components/custom_confirm_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -75,7 +76,75 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                       FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: [],
+          actions: [
+            Builder(
+              builder: (context) => FlutterFlowIconButton(
+                borderRadius: 8.0,
+                buttonSize: 53.33,
+                fillColor: FlutterFlowTheme.of(context).error,
+                icon: Icon(
+                  Icons.logout_sharp,
+                  color: FlutterFlowTheme.of(context).info,
+                  size: 24.0,
+                ),
+                onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (dialogContext) {
+                      return Dialog(
+                        elevation: 0,
+                        insetPadding: EdgeInsets.zero,
+                        backgroundColor: Colors.transparent,
+                        alignment: AlignmentDirectional(0.0, 0.0)
+                            .resolve(Directionality.of(context)),
+                        child: GestureDetector(
+                          onTap: () {
+                            FocusScope.of(dialogContext).unfocus();
+                            FocusManager.instance.primaryFocus?.unfocus();
+                          },
+                          child: Container(
+                            width: MediaQuery.sizeOf(context).width * 0.85,
+                            child: CustomConfirmDialogWidget(
+                              title: FFLocalizations.of(context).getText(
+                                'gle631lq' /* Logout */,
+                              ),
+                              message: FFLocalizations.of(context).getText(
+                                'pbq9hyue' /* Do you really want to get out ... */,
+                              ),
+                              cancelLabel: FFLocalizations.of(context).getText(
+                                'eet03gpf' /* Cancel */,
+                              ),
+                              confirmLabel: FFLocalizations.of(context).getText(
+                                '2qbcc2js' /* Confirm */,
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ).then((value) =>
+                      safeSetState(() => _model.confirmLogout = value));
+
+                  if (_model.confirmLogout!) {
+                    if (Navigator.of(context).canPop()) {
+                      context.pop();
+                    }
+                    context.pushNamed(
+                      LoginWidget.routeName,
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.rightToLeft,
+                        ),
+                      },
+                    );
+                  }
+
+                  safeSetState(() {});
+                },
+              ),
+            ),
+          ],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -229,24 +298,152 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                          PresupuestoPageWidget.routeName);
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'hes8elfq' /* Budget */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.attach_money_sharp,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 80.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xFFD89028),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xBB000000),
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
+                                          ),
+                                      borderRadius: BorderRadius.circular(40.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                          CategoriaPageWidget.routeName);
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'pokpgbki' /* Categories */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.category_outlined,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 80.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xFFD89028),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xBB000000),
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
+                                          ),
+                                      elevation: 0.0,
+                                      borderRadius: BorderRadius.circular(40.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(40.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('RegistrarButton pressed ...');
+                              onPressed: () async {
+                                context
+                                    .pushNamed(TransaccionPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
                                 'ciopx9q0' /* Register Transation */,
                               ),
+                              icon: Icon(
+                                Icons.calculate_outlined,
+                                size: 20.0,
+                              ),
                               options: FFButtonOptions(
                                 width: 250.0,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
+                                padding: EdgeInsets.all(0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFFD89028),
@@ -270,8 +467,8 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                           .titleLarge
                                           .fontStyle,
                                     ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
+                                elevation: 20.0,
+                                borderRadius: BorderRadius.circular(40.0),
                               ),
                             ),
                           ),
@@ -281,288 +478,120 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () async {
-                                context
-                                    .pushNamed(CategoriaPageWidget.routeName);
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'pokpgbki' /* Categories */,
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    context
+                                        .pushNamed(MetasAhorroWidget.routeName);
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    '489bv5vf' /* Savings Goals */,
+                                  ),
+                                  icon: Icon(
+                                    Icons.savings_outlined,
+                                    size: 20.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 150.0,
+                                    height: 80.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 0.0, 16.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFD89028),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xBB000000),
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleLarge
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleLarge
+                                                  .fontStyle,
+                                        ),
+                                    elevation: 20.0,
+                                    borderRadius: BorderRadius.circular(40.0),
+                                  ),
+                                ),
                               ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
+                            ],
                           ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('PresupuestoButton pressed ...');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'hes8elfq' /* Budget */,
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed(
+                                        EstadisticasWidget.routeName);
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'iqkqu7v4' /* Statistics */,
+                                  ),
+                                  icon: Icon(
+                                    Icons.query_stats,
+                                    size: 20.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 150.0,
+                                    height: 80.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 0.0, 16.0, 0.0),
+                                    iconAlignment: IconAlignment.end,
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFD89028),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xBB000000),
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleLarge
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleLarge
+                                                  .fontStyle,
+                                        ),
+                                    elevation: 20.0,
+                                    borderRadius: BorderRadius.circular(40.0),
+                                  ),
+                                ),
                               ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('EstadisticasButton pressed ...');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'iqkqu7v4' /* Statistics and Reports */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('MetasButton pressed ...');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                '489bv5vf' /* Savings Goals */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('AlertasButton pressed ...');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'd0ur809j' /* Alert Management */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('SincronizarButton pressed ...');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                '5rr88xh3' /* Cloud Sync */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 250.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xBB000000),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
+                            ],
                           ),
                         ],
                       ),

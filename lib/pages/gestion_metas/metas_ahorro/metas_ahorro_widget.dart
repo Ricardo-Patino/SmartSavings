@@ -54,6 +54,18 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).alternate,
           automaticallyImplyLeading: false,
+          leading: FlutterFlowIconButton(
+            borderRadius: 8.0,
+            buttonSize: 40.0,
+            fillColor: FlutterFlowTheme.of(context).alternate,
+            icon: Icon(
+              Icons.arrow_back,
+              size: 24.0,
+            ),
+            onPressed: () async {
+              context.pushNamed(MainPageWidget.routeName);
+            },
+          ),
           title: Text(
             FFLocalizations.of(context).getText(
               '8ntertnt' /* Metas de Ahorro */,
@@ -236,11 +248,12 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                           Padding(
                             padding: EdgeInsets.all(10.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('ActivasButton pressed ...');
+                              onPressed: () async {
+                                context
+                                    .pushNamed(CrearMetaPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'ewytv51a' /* Active Goals */,
+                                'ewytv51a' /* Create Goal */,
                               ),
                               options: FFButtonOptions(
                                 width: 250.0,
@@ -275,49 +288,53 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                               ),
                             ),
                           ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '9myo5efr' /*  */,
-                            ),
-                            icon: Icon(
-                              Icons.add,
-                              size: 30.0,
-                            ),
-                            options: FFButtonOptions(
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconAlignment: IconAlignment.start,
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconColor: Colors.black,
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    font: GoogleFonts.inter(
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                    MetasActivasPageWidget.routeName);
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'z5t3r4di' /* Active Goals */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 250.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xD928D84C),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xBB000000),
+                                      letterSpacing: 0.0,
                                       fontWeight: FlutterFlowTheme.of(context)
-                                          .titleSmall
+                                          .titleLarge
                                           .fontWeight,
                                       fontStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
+                                          .titleLarge
                                           .fontStyle,
                                     ),
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontStyle,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(8.0),
+                                elevation: 0.0,
+                                borderRadius: BorderRadius.circular(24.0),
+                              ),
                             ),
                           ),
                         ],
@@ -330,8 +347,8 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                             padding: EdgeInsets.all(10.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                context
-                                    .pushNamed(CategoriaPageWidget.routeName);
+                                context.pushNamed(
+                                    MetasCompletasPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
                                 '3g9a81nt' /* Goals Accomplished */,
@@ -369,49 +386,52 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                               ),
                             ),
                           ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'rn06nvpv' /*  */,
-                            ),
-                            icon: Icon(
-                              Icons.add,
-                              size: 30.0,
-                            ),
-                            options: FFButtonOptions(
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconAlignment: IconAlignment.start,
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconColor: Colors.black,
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    font: GoogleFonts.inter(
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(VerMetasWidget.routeName);
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'av1n96x9' /* All Goals */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 250.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xD928D84C),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xBB000000),
+                                      letterSpacing: 0.0,
                                       fontWeight: FlutterFlowTheme.of(context)
-                                          .titleSmall
+                                          .titleLarge
                                           .fontWeight,
                                       fontStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
+                                          .titleLarge
                                           .fontStyle,
                                     ),
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontStyle,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(8.0),
+                                elevation: 0.0,
+                                borderRadius: BorderRadius.circular(24.0),
+                              ),
                             ),
                           ),
                         ],

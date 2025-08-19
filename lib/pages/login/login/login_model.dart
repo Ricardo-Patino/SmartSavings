@@ -16,6 +16,10 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   int get tabBarPreviousIndex =>
       tabBarController != null ? tabBarController!.previousIndex : 0;
 
+  // State field(s) for Username widget.
+  FocusNode? usernameFocusNode;
+  TextEditingController? usernameTextController;
+  String? Function(BuildContext, String?)? usernameTextControllerValidator;
   // State field(s) for emailAddress widget.
   FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressTextController;
@@ -39,7 +43,7 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   // Stores action output result for [Custom Action - parseDate] action in SubmitButton widget.
   DateTime? birthday;
   // Stores action output result for [Custom Action - encryptData] action in SubmitButton widget.
-  String? passwordSU;
+  String? passwordEncrypted;
   // Stores action output result for [Backend Call - Create Document] action in SubmitButton widget.
   UsersRecord? result;
   // State field(s) for loginEmailAddress widget.
@@ -69,6 +73,9 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   @override
   void dispose() {
     tabBarController?.dispose();
+    usernameFocusNode?.dispose();
+    usernameTextController?.dispose();
+
     emailAddressFocusNode?.dispose();
     emailAddressTextController?.dispose();
 

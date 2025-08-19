@@ -509,22 +509,6 @@ class _SearchScreenWidgetState extends State<SearchScreenWidget>
                                                         BorderRadius.circular(
                                                             100.0),
                                                   ),
-                                                  child: Container(
-                                                    width: 120.0,
-                                                    height: 120.0,
-                                                    clipBehavior:
-                                                        Clip.antiAlias,
-                                                    decoration: BoxDecoration(
-                                                      shape: BoxShape.circle,
-                                                    ),
-                                                    child: Image.network(
-                                                      functions
-                                                          .getAssetFromCategory(
-                                                              expenseItem
-                                                                  .category)!,
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  ),
                                                 ),
                                                 Expanded(
                                                   child: Padding(

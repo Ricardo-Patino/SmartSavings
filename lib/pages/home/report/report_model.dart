@@ -35,8 +35,6 @@ class ReportModel extends FlutterFlowModel<ReportWidget> {
 
   ///  State fields for stateful widgets in this page.
 
-  // Stores action output result for [Alert Dialog - Custom Dialog] action in Button widget.
-  int? monthPicker;
   // Model for progress_bar component.
   late ProgressBarModel progressBarModel;
 

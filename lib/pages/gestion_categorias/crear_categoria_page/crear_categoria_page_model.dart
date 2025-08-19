@@ -9,6 +9,7 @@ class CrearCategoriaPageModel
     extends FlutterFlowModel<CrearCategoriaPageWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final formKey = GlobalKey<FormState>();
   // State field(s) for BuscarTextInput widget.
   FocusNode? buscarTextInputFocusNode;
   TextEditingController? buscarTextInputTextController;
@@ -18,23 +19,45 @@ class CrearCategoriaPageModel
   FocusNode? nombreInputFocusNode;
   TextEditingController? nombreInputTextController;
   String? Function(BuildContext, String?)? nombreInputTextControllerValidator;
+  String? _nombreInputTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'w42enfyi' /* Name is required */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for PorcentajeInput widget.
   FocusNode? porcentajeInputFocusNode;
   TextEditingController? porcentajeInputTextController;
   String? Function(BuildContext, String?)?
       porcentajeInputTextControllerValidator;
+  String? _porcentajeInputTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '32pd6p3p' /* Used Percentage is required */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // State field(s) for TipoInput widget.
-  FocusNode? tipoInputFocusNode;
-  TextEditingController? tipoInputTextController;
-  String? Function(BuildContext, String?)? tipoInputTextControllerValidator;
   // Stores action output result for [Backend Call - Create Document] action in CrearButton widget.
   CategoriaRecord? categoria;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    nombreInputTextControllerValidator = _nombreInputTextControllerValidator;
+    porcentajeInputTextControllerValidator =
+        _porcentajeInputTextControllerValidator;
+  }
 
   @override
   void dispose() {
@@ -46,8 +69,5 @@ class CrearCategoriaPageModel
 
     porcentajeInputFocusNode?.dispose();
     porcentajeInputTextController?.dispose();
-
-    tipoInputFocusNode?.dispose();
-    tipoInputTextController?.dispose();
   }
 }

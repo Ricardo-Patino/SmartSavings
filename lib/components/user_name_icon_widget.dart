@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'user_name_icon_model.dart';
 export 'user_name_icon_model.dart';
 
@@ -53,25 +52,10 @@ class _UserNameIconWidgetState extends State<UserNameIconWidget> {
         color: FlutterFlowTheme.of(context).alternate,
         borderRadius: BorderRadius.circular(100.0),
       ),
-      child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
-        child: Text(
-          FFLocalizations.of(context).getText(
-            '6qw7pk5q' /* SS */,
-          ),
-          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                font: GoogleFonts.inter(
-                  fontWeight:
-                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                ),
-                color: FlutterFlowTheme.of(context).primaryText,
-                fontSize: widget.fontSize,
-                letterSpacing: 0.0,
-                fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-              ),
-        ),
+      child: Icon(
+        Icons.savings_outlined,
+        color: FlutterFlowTheme.of(context).primaryText,
+        size: 24.0,
       ),
     );
   }

@@ -1,3 +1,18 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "transaccion",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ownerID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "periodDate",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ]
 }

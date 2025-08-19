@@ -44,6 +44,9 @@ class _LoginWidgetState extends State<LoginWidget>
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
 
+    _model.usernameTextController ??= TextEditingController();
+    _model.usernameFocusNode ??= FocusNode();
+
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();
 
@@ -447,9 +450,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               double.infinity,
                                                           child: TextFormField(
                                                             controller: _model
-                                                                .emailAddressTextController,
+                                                                .usernameTextController,
                                                             focusNode: _model
-                                                                .emailAddressFocusNode,
+                                                                .usernameFocusNode,
                                                             autofocus: false,
                                                             autofillHints: [
                                                               AutofillHints
@@ -490,7 +493,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                'mb5anmnv' /* Email Address */,
+                                                                'mb5anmnv' /* Username */,
                                                               ),
                                                               enabledBorder:
                                                                   OutlineInputBorder(
@@ -555,7 +558,176 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               contentPadding:
                                                                   EdgeInsets
                                                                       .all(
-                                                                          24.0),
+                                                                          10.0),
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .titleMedium
+                                                                .override(
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .titleMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .titleMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                            maxLength: 50,
+                                                            buildCounter: (context,
+                                                                    {required currentLength,
+                                                                    required isFocused,
+                                                                    maxLength}) =>
+                                                                null,
+                                                            keyboardType:
+                                                                TextInputType
+                                                                    .emailAddress,
+                                                            validator: _model
+                                                                .usernameTextControllerValidator
+                                                                .asValidator(
+                                                                    context),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    0.0,
+                                                                    0.0,
+                                                                    16.0),
+                                                        child: Container(
+                                                          width:
+                                                              double.infinity,
+                                                          child: TextFormField(
+                                                            controller: _model
+                                                                .emailAddressTextController,
+                                                            focusNode: _model
+                                                                .emailAddressFocusNode,
+                                                            autofocus: false,
+                                                            autofillHints: [
+                                                              AutofillHints
+                                                                  .email
+                                                            ],
+                                                            textInputAction:
+                                                                TextInputAction
+                                                                    .next,
+                                                            obscureText: false,
+                                                            decoration:
+                                                                InputDecoration(
+                                                              labelStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleMedium
+                                                                      .override(
+                                                                        font: GoogleFonts
+                                                                            .inter(
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .titleMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .titleMedium
+                                                                              .fontStyle,
+                                                                        ),
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .titleMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .titleMedium
+                                                                            .fontStyle,
+                                                                      ),
+                                                              hintText:
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                '1fjmbvvf' /* Email Address */,
+                                                              ),
+                                                              enabledBorder:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate,
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                              ),
+                                                              focusedBorder:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                              ),
+                                                              errorBorder:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .error,
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                              ),
+                                                              focusedErrorBorder:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .error,
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                              ),
+                                                              filled: true,
+                                                              fillColor: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryBackground,
+                                                              contentPadding:
+                                                                  EdgeInsets
+                                                                      .all(
+                                                                          10.0),
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -622,11 +794,11 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             autofocus: false,
                                                             autofillHints: [
                                                               AutofillHints
-                                                                  .email
+                                                                  .birthday
                                                             ],
                                                             textInputAction:
                                                                 TextInputAction
-                                                                    .send,
+                                                                    .next,
                                                             obscureText: false,
                                                             decoration:
                                                                 InputDecoration(
@@ -749,7 +921,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               contentPadding:
                                                                   EdgeInsets
                                                                       .all(
-                                                                          24.0),
+                                                                          10.0),
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -917,7 +1089,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               contentPadding:
                                                                   EdgeInsets
                                                                       .all(
-                                                                          24.0),
+                                                                          10.0),
                                                               suffixIcon:
                                                                   InkWell(
                                                                 onTap: () =>
@@ -1108,7 +1280,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               contentPadding:
                                                                   EdgeInsets
                                                                       .all(
-                                                                          24.0),
+                                                                          10.0),
                                                               suffixIcon:
                                                                   InkWell(
                                                                 onTap: () =>
@@ -1206,7 +1378,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                       .birthdateTextController
                                                                       .text,
                                                                 );
-                                                                _model.passwordSU =
+                                                                _model.passwordEncrypted =
                                                                     await actions
                                                                         .encryptData(
                                                                   _model
@@ -1225,11 +1397,16 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                         .emailAddressTextController
                                                                         .text,
                                                                     password: _model
-                                                                        .passwordSU,
+                                                                        .passwordEncrypted,
                                                                     active:
                                                                         true,
                                                                     birthday: _model
                                                                         .birthday,
+                                                                    name: _model
+                                                                        .usernameTextController
+                                                                        .text,
+                                                                    notificaciones:
+                                                                        false,
                                                                   ),
                                                                   ...mapToFirestore(
                                                                     {
@@ -1247,11 +1424,16 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                         .emailAddressTextController
                                                                         .text,
                                                                     password: _model
-                                                                        .passwordSU,
+                                                                        .passwordEncrypted,
                                                                     active:
                                                                         true,
                                                                     birthday: _model
                                                                         .birthday,
+                                                                    name: _model
+                                                                        .usernameTextController
+                                                                        .text,
+                                                                    notificaciones:
+                                                                        false,
                                                                   ),
                                                                   ...mapToFirestore(
                                                                     {
@@ -1271,7 +1453,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     SnackBar(
                                                                       content:
                                                                           Text(
-                                                                        'You have been successfult signup.',
+                                                                        'You have been successfully signup.',
                                                                         style:
                                                                             TextStyle(
                                                                           color:
@@ -1292,21 +1474,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     context
                                                                         .pop();
                                                                   }
-                                                                  context
-                                                                      .pushNamed(
-                                                                    LoginWidget
-                                                                        .routeName,
-                                                                    extra: <String,
-                                                                        dynamic>{
-                                                                      kTransitionInfoKey:
-                                                                          TransitionInfo(
-                                                                        hasTransition:
-                                                                            true,
-                                                                        transitionType:
-                                                                            PageTransitionType.rightToLeft,
-                                                                      ),
-                                                                    },
-                                                                  );
+                                                                  context.pushNamed(
+                                                                      LoginWidget
+                                                                          .routeName);
                                                                 } else {
                                                                   ScaffoldMessenger.of(
                                                                           context)
@@ -1314,7 +1484,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     SnackBar(
                                                                       content:
                                                                           Text(
-                                                                        'You could not be signed ip at this moment!',
+                                                                        'You could not be signed up at this moment!',
                                                                         style:
                                                                             TextStyle(
                                                                           color:
@@ -1983,6 +2153,13 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                           .routeName,
                                                                       context
                                                                           .mounted);
+                                                              FFAppState()
+                                                                      .userLogged =
+                                                                  _model
+                                                                      .loginEmailAddressTextController
+                                                                      .text;
+                                                              safeSetState(
+                                                                  () {});
                                                             } else {
                                                               // API Error
                                                               ScaffoldMessenger
@@ -2128,7 +2305,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             context.pop();
                                                           }
                                                           context.pushNamed(
-                                                            RecuperarCuentaWidget
+                                                            ForgotPasswordWidget
                                                                 .routeName,
                                                             extra: <String,
                                                                 dynamic>{

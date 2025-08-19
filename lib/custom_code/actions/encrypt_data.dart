@@ -10,10 +10,9 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-// fix this error: Action "encryptData" declaration not found.  Are you sure you want to save?
 import 'package:encrypt/encrypt.dart' as enc;
 
-Future<String> encryptData(String plainText) async {
+Future<String?> encryptData(String plainText) async {
   final key = enc.Key.fromUtf8('6SiAalLRwmOLBF2L3Lt2J4xABzoZfpYG');
   final iv = enc.IV.fromUtf8('4anux8DhwjFkzICr');
 

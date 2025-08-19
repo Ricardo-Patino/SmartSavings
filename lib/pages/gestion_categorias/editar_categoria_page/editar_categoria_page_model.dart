@@ -25,10 +25,6 @@ class EditarCategoriaPageModel
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // State field(s) for TipoInput widget.
-  FocusNode? tipoInputFocusNode;
-  TextEditingController? tipoInputTextController;
-  String? Function(BuildContext, String?)? tipoInputTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -43,8 +39,5 @@ class EditarCategoriaPageModel
 
     porcentajeInputFocusNode?.dispose();
     porcentajeInputTextController?.dispose();
-
-    tipoInputFocusNode?.dispose();
-    tipoInputTextController?.dispose();
   }
 }

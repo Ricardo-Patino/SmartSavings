@@ -126,18 +126,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: PerfildeUsuarioWidget.routeName,
-          path: PerfildeUsuarioWidget.routePath,
+          name: ProfileWidget.routeName,
+          path: ProfileWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'PerfildeUsuario')
-              : PerfildeUsuarioWidget(),
+              ? NavBarPage(initialPage: 'Profile')
+              : ProfileWidget(),
         ),
         FFRoute(
-          name: RecuperarCuentaWidget.routeName,
-          path: RecuperarCuentaWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'RecuperarCuenta')
-              : RecuperarCuentaWidget(),
+          name: ForgotPasswordWidget.routeName,
+          path: ForgotPasswordWidget.routePath,
+          builder: (context, params) => ForgotPasswordWidget(),
         ),
         FFRoute(
             name: MainPageWidget.routeName,
@@ -206,13 +204,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   page: ResumenMensualWidget(),
                 )),
         FFRoute(
-            name: ResumeCategoriaWidget.routeName,
-            path: ResumeCategoriaWidget.routePath,
-            builder: (context, params) => NavBarPage(
-                  initialPage: '',
-                  page: ResumeCategoriaWidget(),
-                )),
-        FFRoute(
             name: ResumenHistoricoWidget.routeName,
             path: ResumenHistoricoWidget.routePath,
             builder: (context, params) => NavBarPage(
@@ -225,6 +216,80 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             builder: (context, params) => NavBarPage(
                   initialPage: '',
                   page: MetasAhorroWidget(),
+                )),
+        FFRoute(
+            name: EditarTransaccionPageWidget.routeName,
+            path: EditarTransaccionPageWidget.routePath,
+            asyncParams: {
+              'transaccion':
+                  getDoc(['transaccion'], TransaccionRecord.fromSnapshot),
+            },
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: EditarTransaccionPageWidget(
+                    transaccion: params.getParam(
+                      'transaccion',
+                      ParamType.Document,
+                    ),
+                  ),
+                )),
+        FFRoute(
+            name: PresupuestoPageWidget.routeName,
+            path: PresupuestoPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: PresupuestoPageWidget(),
+                )),
+        FFRoute(
+            name: CreatePresupuestoPageWidget.routeName,
+            path: CreatePresupuestoPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: CreatePresupuestoPageWidget(),
+                )),
+        FFRoute(
+            name: EditarPresupuestoPageWidget.routeName,
+            path: EditarPresupuestoPageWidget.routePath,
+            asyncParams: {
+              'presupuesto':
+                  getDoc(['presupuesto'], PresupuestoRecord.fromSnapshot),
+            },
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: EditarPresupuestoPageWidget(
+                    presupuesto: params.getParam(
+                      'presupuesto',
+                      ParamType.Document,
+                    ),
+                  ),
+                )),
+        FFRoute(
+            name: CrearMetaPageWidget.routeName,
+            path: CrearMetaPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: CrearMetaPageWidget(),
+                )),
+        FFRoute(
+            name: MetasActivasPageWidget.routeName,
+            path: MetasActivasPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: MetasActivasPageWidget(),
+                )),
+        FFRoute(
+            name: MetasCompletasPageWidget.routeName,
+            path: MetasCompletasPageWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: MetasCompletasPageWidget(),
+                )),
+        FFRoute(
+            name: VerMetasWidget.routeName,
+            path: VerMetasWidget.routePath,
+            builder: (context, params) => NavBarPage(
+                  initialPage: '',
+                  page: VerMetasWidget(),
                 ))
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

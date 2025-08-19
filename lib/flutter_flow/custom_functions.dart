@@ -13,50 +13,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '/backend/schema/structs/index.dart';
 import '/auth/custom_auth/auth_util.dart';
 
-String? getAssetFromCategory(String? category) {
-  Map<String, String> categoryUrls = {
-    'CAFE':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Cafe.png?alt=media&token=41494856-412c-4547-9225-bc29b554da72',
-    'DONATE':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Donate.png?alt=media&token=954a52fa-5668-401c-923f-0d0cb54e694e',
-    'EDUCATION':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Education.png?alt=media&token=17de33f7-6494-4b3f-b765-b8bbb5b65e14',
-    'ELECTRONICS':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Electronics.png?alt=media&token=efdc89af-1c98-4e2f-b4b7-cce46a090bb2',
-    'FUEL':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Fuel.png?alt=media&token=33d754a8-3057-4e8d-95e4-97c21651f54f',
-    'GIFTS':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Gifts.png?alt=media&token=a123e373-16e8-4ddd-828e-6b34920ed010',
-    'GROCERIES':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Groceries.png?alt=media&token=df593658-f177-4551-9373-10fbbe7c5ebb',
-    'HEALTH':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Health.png?alt=media&token=c3b7bec5-7477-4734-a61b-b639e2e2b571',
-    'INSTITUTE':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Institute.png?alt=media&token=964c9af6-0af4-40d1-90be-cf6ef1663585',
-    'LAUNDRY':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Laundry.png?alt=media&token=ee1cce6b-8b8a-48b8-ac31-5ff96c27ddbd',
-    'LIQUOR':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Liquor.png?alt=media&token=daf2f91d-212b-4e98-a818-b7fc05a01fc3',
-    'MAINTENANCE':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Maintenance.png?alt=media&token=5712873d-d221-4eb4-98ed-83bf295898a6',
-    'PARTY':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Party.png?alt=media&token=85d206bb-298b-4a1a-a2c4-39717719ac86',
-    'RESTAURANT':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Restaurant.png?alt=media&token=e27148f2-1cc2-40fb-a43f-f40722092525',
-    'SAVINGS':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Savings.png?alt=media&token=26434a44-33c0-4953-bf1f-cba079afc042',
-    'SELF DEVELOPMENT':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Self%20development.png?alt=media&token=551c8752-1361-447c-a749-cc36987d50c2',
-    'SPORT':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Sport.png?alt=media&token=457be9c9-88f0-410d-b10a-7e7bf057b430',
-    'TRANSPORTATION':
-        'https://firebasestorage.googleapis.com/v0/b/spendsmart-f5c99.appspot.com/o/Transportation.png?alt=media&token=401eedd5-d58b-4e6b-b8e1-4e7bc30855c0',
-    '': 'https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png'
-  };
-
-  return categoryUrls[category ?? ''];
-}
-
 String? getCategoryLabel(
   String? category,
   String? languageCode,
@@ -375,4 +331,33 @@ DocumentReference parseCategoriaDocument(String documentId) {
   final documentReference =
       FirebaseFirestore.instance.collection('categoria').doc(documentId);
   return documentReference;
+}
+
+List<String> getMonthFromPeriod(String period) {
+  final parts = period.trim().toLowerCase().split(RegExp(r'\s*-\s*'));
+  final month = parts[0];
+  final year = parts[1];
+
+  return [month, year];
+}
+
+String periodFromDate(DateTime d) {
+  final y = d.year.toString();
+  final m = d.month.toString().padLeft(2, '0');
+  return '$m-$y';
+}
+
+int sumList(List<int> values) {
+  var total = 0;
+  for (final v in values) {
+    if (v != null) total += v.toInt();
+  }
+  return total;
+}
+
+List<DateTime>? calcularRangoMesActual() {
+  final now = DateTime.now();
+  final start = DateTime(now.year, now.month, 1);
+  final end = DateTime(now.year, now.month + 1, 0);
+  return [start, end];
 }

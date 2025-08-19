@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 class MainPageModel extends FlutterFlowModel<MainPageWidget> {
   ///  State fields for stateful widgets in this page.
 
+  // Stores action output result for [Alert Dialog - Custom Dialog] action in IconButton widget.
+  bool? confirmLogout;
   // State field(s) for BuscarTextInput widget.
   FocusNode? buscarTextInputFocusNode;
   TextEditingController? buscarTextInputTextController;

@@ -48,10 +48,6 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
         TextEditingController(text: widget.categoria?.porcentaje.toString());
     _model.porcentajeInputFocusNode ??= FocusNode();
 
-    _model.tipoInputTextController ??=
-        TextEditingController(text: widget.categoria?.tipo);
-    _model.tipoInputFocusNode ??= FocusNode();
-
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -92,7 +88,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                'uxiky8qi' /* Edit  Categorie */,
+                'uxiky8qi' /* Edit  Categories */,
               ),
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -652,147 +648,6 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                         ].divide(SizedBox(width: 10.0)),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '5eojpxmy' /* Type */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                            ),
-                          ),
-                          Container(
-                            width: 250.0,
-                            child: TextFormField(
-                              controller: _model.tipoInputTextController,
-                              focusNode: _model.tipoInputFocusNode,
-                              autofocus: false,
-                              obscureText: false,
-                              decoration: InputDecoration(
-                                isDense: true,
-                                labelStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontStyle,
-                                      ),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontStyle,
-                                    ),
-                                hintText: FFLocalizations.of(context).getText(
-                                  'bx0rab4u' /* Type */,
-                                ),
-                                hintStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontStyle,
-                                      ),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontStyle,
-                                    ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context).error,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context).error,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                filled: true,
-                                fillColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                              cursorColor:
-                                  FlutterFlowTheme.of(context).primaryText,
-                              validator: _model.tipoInputTextControllerValidator
-                                  .asValidator(context),
-                            ),
-                          ),
-                        ].divide(SizedBox(width: 10.0)),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -809,8 +664,8 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                           nombre: _model.nombreInputTextController.text,
                           porcentaje: int.tryParse(
                               _model.porcentajeInputTextController.text),
-                          tipo: _model.tipoInputTextController.text,
                           color: _model.dropDownValue,
+                          updatedAt: getCurrentTimestamp,
                         ));
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
@@ -829,7 +684,7 @@ class _EditarCategoriaPageWidgetState extends State<EditarCategoriaPageWidget> {
                         context.pushNamed(CategoriaPageWidget.routeName);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '53vrqsjd' /* Edit  Categorie */,
+                        '53vrqsjd' /* Edit  Category */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,

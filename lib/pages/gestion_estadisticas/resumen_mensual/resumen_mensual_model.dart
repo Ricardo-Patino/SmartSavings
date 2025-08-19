@@ -3,20 +3,16 @@ import 'resumen_mensual_widget.dart' show ResumenMensualWidget;
 import 'package:flutter/material.dart';
 
 class ResumenMensualModel extends FlutterFlowModel<ResumenMensualWidget> {
-  ///  State fields for stateful widgets in this page.
+  ///  Local state fields for this page.
+  /// Fecha de Inicio de Mes
+  DateTime? inicioMes;
 
-  // State field(s) for BuscarEstTextInput widget.
-  FocusNode? buscarEstTextInputFocusNode;
-  TextEditingController? buscarEstTextInputTextController;
-  String? Function(BuildContext, String?)?
-      buscarEstTextInputTextControllerValidator;
+  /// Fecha de Fin de Mes
+  DateTime? finMes;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    buscarEstTextInputFocusNode?.dispose();
-    buscarEstTextInputTextController?.dispose();
-  }
+  void dispose() {}
 }

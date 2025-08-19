@@ -1,28 +1,31 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'recuperar_cuenta_model.dart';
-export 'recuperar_cuenta_model.dart';
+import 'forgot_password_model.dart';
+export 'forgot_password_model.dart';
 
-class RecuperarCuentaWidget extends StatefulWidget {
-  const RecuperarCuentaWidget({super.key});
+class ForgotPasswordWidget extends StatefulWidget {
+  const ForgotPasswordWidget({super.key});
 
-  static String routeName = 'RecuperarCuenta';
-  static String routePath = '/RecuperarCuenta';
+  static String routeName = 'ForgotPassword';
+  static String routePath = '/ForgotPassword';
 
   @override
-  State<RecuperarCuentaWidget> createState() => _RecuperarCuentaWidgetState();
+  State<ForgotPasswordWidget> createState() => _ForgotPasswordWidgetState();
 }
 
-class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
+class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
     with TickerProviderStateMixin {
-  late RecuperarCuentaModel _model;
+  late ForgotPasswordModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -31,7 +34,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => RecuperarCuentaModel());
+    _model = createModel(context, () => ForgotPasswordModel());
 
     _model.tabBarController = TabController(
       vsync: this,
@@ -39,8 +42,8 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
 
-    _model.emailAddressTextController ??= TextEditingController();
-    _model.emailAddressFocusNode ??= FocusNode();
+    _model.emailAddressRecoverTextController ??= TextEditingController();
+    _model.emailAddressRecoverFocusNode ??= FocusNode();
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
@@ -409,9 +412,9 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                               double.infinity,
                                                           child: TextFormField(
                                                             controller: _model
-                                                                .emailAddressTextController,
+                                                                .emailAddressRecoverTextController,
                                                             focusNode: _model
-                                                                .emailAddressFocusNode,
+                                                                .emailAddressRecoverFocusNode,
                                                             autofocus: false,
                                                             autofillHints: [
                                                               AutofillHints
@@ -559,7 +562,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                 TextInputType
                                                                     .emailAddress,
                                                             validator: _model
-                                                                .emailAddressTextControllerValidator
+                                                                .emailAddressRecoverTextControllerValidator
                                                                 .asValidator(
                                                                     context),
                                                           ),
@@ -580,51 +583,68 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                           child: FFButtonWidget(
                                                             onPressed:
                                                                 () async {
-                                                              if ((_model.emailAddressTextController
-                                                                          .text ==
-                                                                      _model
-                                                                          .emailAddressTextController
-                                                                          .text) &&
-                                                                  (_model.passwordEmail
-                                                                              ?.email !=
-                                                                          null &&
-                                                                      _model.passwordEmail
-                                                                              ?.email !=
-                                                                          '')) {
-                                                                var usersRecordReference =
-                                                                    UsersRecord
-                                                                        .collection
-                                                                        .doc();
-                                                                await usersRecordReference
-                                                                    .set(
-                                                                        createUsersRecordData(
-                                                                  email: _model
-                                                                      .emailAddressTextController
+                                                              _model.userExist =
+                                                                  await queryUsersRecordOnce(
+                                                                queryBuilder:
+                                                                    (usersRecord) =>
+                                                                        usersRecord
+                                                                            .where(
+                                                                  'email',
+                                                                  isEqualTo: _model
+                                                                      .emailAddressRecoverTextController
                                                                       .text,
-                                                                  password:
-                                                                      'password',
-                                                                ));
-                                                                _model.passwordEmail =
-                                                                    UsersRecord.getDocumentFromData(
+                                                                ),
+                                                                singleRecord:
+                                                                    true,
+                                                              ).then((s) => s
+                                                                      .firstOrNull);
+                                                              if (_model
+                                                                      .userExist
+                                                                      ?.reference !=
+                                                                  null) {
+                                                                _model.randomNumber =
+                                                                    await actions
+                                                                        .generateRandom();
+                                                                _model.encryptedPasswordRecovery =
+                                                                    await actions
+                                                                        .encryptData(
+                                                                  _model
+                                                                      .randomNumber!,
+                                                                );
+
+                                                                await _model
+                                                                    .userExist!
+                                                                    .reference
+                                                                    .update(
                                                                         createUsersRecordData(
-                                                                          email: _model
-                                                                              .emailAddressTextController
-                                                                              .text,
-                                                                          password:
-                                                                              'password',
-                                                                        ),
-                                                                        usersRecordReference);
-                                                                if (_model
-                                                                        .passwordEmail
-                                                                        ?.reference !=
-                                                                    null) {
+                                                                  password: _model
+                                                                      .encryptedPasswordRecovery,
+                                                                ));
+                                                                _model.apiResult41l =
+                                                                    await AboveLimitNotificationCall
+                                                                        .call(
+                                                                  from:
+                                                                      'postmaster@sandbox5d34787100dc4bb59be0dc2fcc156a7a.mailgun.org',
+                                                                  to: _model
+                                                                      .emailAddressRecoverTextController
+                                                                      .text,
+                                                                  subject:
+                                                                      'Reset your Password',
+                                                                  text:
+                                                                      'Use this password to Log into your account of SmartSavings. Then go update your password. Password: ${_model.randomNumber}',
+                                                                );
+
+                                                                if ((_model
+                                                                        .apiResult41l
+                                                                        ?.succeeded ??
+                                                                    true)) {
                                                                   ScaffoldMessenger.of(
                                                                           context)
                                                                       .showSnackBar(
                                                                     SnackBar(
                                                                       content:
                                                                           Text(
-                                                                        'Password email was sent',
+                                                                        'Check your Inbox for the Recovery Email',
                                                                         style:
                                                                             TextStyle(
                                                                           color:
@@ -636,29 +656,8 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                               4000),
                                                                       backgroundColor:
                                                                           FlutterFlowTheme.of(context)
-                                                                              .success,
+                                                                              .secondary,
                                                                     ),
-                                                                  );
-                                                                  if (Navigator.of(
-                                                                          context)
-                                                                      .canPop()) {
-                                                                    context
-                                                                        .pop();
-                                                                  }
-                                                                  context
-                                                                      .pushNamed(
-                                                                    LoginWidget
-                                                                        .routeName,
-                                                                    extra: <String,
-                                                                        dynamic>{
-                                                                      kTransitionInfoKey:
-                                                                          TransitionInfo(
-                                                                        hasTransition:
-                                                                            true,
-                                                                        transitionType:
-                                                                            PageTransitionType.rightToLeft,
-                                                                      ),
-                                                                    },
                                                                   );
                                                                 } else {
                                                                   ScaffoldMessenger.of(
@@ -667,7 +666,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                     SnackBar(
                                                                       content:
                                                                           Text(
-                                                                        'Reset password could no be sent at this moment!',
+                                                                        'Error on sending the Recovery Email',
                                                                         style:
                                                                             TextStyle(
                                                                           color:
@@ -690,7 +689,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                   SnackBar(
                                                                     content:
                                                                         Text(
-                                                                      'Email dont match.',
+                                                                      'This account doesn\'t exist!',
                                                                       style:
                                                                           TextStyle(
                                                                         color: FlutterFlowTheme.of(context)
@@ -713,7 +712,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                             text: FFLocalizations
                                                                     .of(context)
                                                                 .getText(
-                                                              '0wbdnkmn' /* Send Password */,
+                                                              '0wbdnkmn' /* Reset Password */,
                                                             ),
                                                             options:
                                                                 FFButtonOptions(
@@ -821,21 +820,46 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                     4.0,
                                                                     0.0,
                                                                     24.0),
-                                                        child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'bstwbuvq' /* Not an active user? Sign up. */,
-                                                          ),
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .inter(
+                                                        child: InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
+                                                          onTap: () async {
+                                                            context.pushNamed(
+                                                                LoginWidget
+                                                                    .routeName);
+                                                          },
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'bstwbuvq' /* Not an active user? Sign up. */,
+                                                            ),
+                                                            textAlign:
+                                                                TextAlign.start,
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelMedium
+                                                                .override(
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMedium
@@ -845,17 +869,7 @@ class _RecuperarCuentaWidgetState extends State<RecuperarCuentaWidget>
                                                                       .labelMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMedium
-                                                                    .fontStyle,
-                                                              ),
+                                                          ),
                                                         ),
                                                       ),
                                                       Align(

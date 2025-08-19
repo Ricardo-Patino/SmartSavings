@@ -35,6 +35,72 @@ class CreateJWTCall {
   }
 }
 
+class AboveLimitNotificationCall {
+  static Future<ApiCallResponse> call({
+    String? from = '',
+    String? to = '',
+    String? subject = '',
+    String? text = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'AboveLimitNotification',
+      apiUrl:
+          'https://api.mailgun.net/v3/sandbox5d34787100dc4bb59be0dc2fcc156a7a.mailgun.org/messages',
+      callType: ApiCallType.POST,
+      headers: {
+        'Authorization':
+            'Basic YXBpOmE5NDcxYTRiMmNmZTFiYWM4ZmIxYzBkMTVmZjZjOGQ0LTgxMmIzNWY1LWRhZDlhZThi',
+      },
+      params: {
+        'from':
+            "postmaster@sandbox5d34787100dc4bb59be0dc2fcc156a7a.mailgun.org",
+        'to': to,
+        'subject': subject,
+        'text': text,
+      },
+      bodyType: BodyType.X_WWW_FORM_URL_ENCODED,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class ResetPasswordCall {
+  static Future<ApiCallResponse> call({
+    String? obbCode = '',
+    String? newPassword = '',
+    String? apiKey = ' AIzaSyDUVXS6diNQOuRmHmTsqaZUWqYWVAF1CQo',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "oobCode": "${escapeStringForJson(obbCode)}",
+  "newPassword": "${escapeStringForJson(newPassword)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'resetPassword',
+      apiUrl:
+          'https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=${apiKey}',
+      callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

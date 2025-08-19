@@ -1,12 +1,10 @@
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
-import '/components/month_picker_dialog_widget.dart';
 import '/components/progress_bar_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -316,156 +314,6 @@ class _ReportWidgetState extends State<ReportWidget>
                                   },
                                 ),
                               ),
-                              Builder(
-                                builder: (context) => FFButtonWidget(
-                                  onPressed: () async {
-                                    if (FFAppState().month == 0) {
-                                      FFAppState().month = functions
-                                          .getMonthNumber(getCurrentTimestamp
-                                              .millisecondsSinceEpoch)!;
-                                      safeSetState(() {});
-                                    }
-                                    if (FFAppState().year == 0) {
-                                      FFAppState().year =
-                                          functions.getYearFromTimestamp(
-                                              getCurrentTimestamp
-                                                  .millisecondsSinceEpoch)!;
-                                      safeSetState(() {});
-                                    }
-                                    await showDialog(
-                                      barrierColor: Color(0x004B39EF),
-                                      context: context,
-                                      builder: (dialogContext) {
-                                        return Dialog(
-                                          elevation: 0,
-                                          insetPadding: EdgeInsets.zero,
-                                          backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
-                                                  0.0, 0.0)
-                                              .resolve(
-                                                  Directionality.of(context)),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              FocusScope.of(dialogContext)
-                                                  .unfocus();
-                                              FocusManager.instance.primaryFocus
-                                                  ?.unfocus();
-                                            },
-                                            child: Container(
-                                              height: 270.0,
-                                              width: MediaQuery.sizeOf(context)
-                                                      .width *
-                                                  0.9,
-                                              child: MonthPickerDialogWidget(
-                                                currentMonth:
-                                                    FFAppState().month,
-                                              ),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ).then((value) => safeSetState(
-                                        () => _model.monthPicker = value));
-
-                                    if (_model.monthPicker != null) {
-                                      FFAppState().month = _model.monthPicker!;
-                                      safeSetState(() {});
-                                    } else {
-                                      FFAppState().month = 0;
-                                      FFAppState().year = 0;
-                                      safeSetState(() {});
-                                    }
-
-                                    FFAppState().queryTimestamps = functions
-                                        .getExpenseListForTimestamp(
-                                            _model.queryExpenses.toList(),
-                                            FFAppState().month,
-                                            FFAppState().year)!
-                                        .toList()
-                                        .cast<int>();
-                                    safeSetState(() {});
-                                    _model.queryCategory = functions
-                                        .filterCategoriesByTimestamps(
-                                            FFAppState().allExpenses.toList(),
-                                            FFAppState()
-                                                .queryTimestamps
-                                                .toList())
-                                        .toList()
-                                        .cast<String>();
-                                    _model.hasCategory = functions
-                                            .filterCategoriesByTimestamps(
-                                                FFAppState()
-                                                    .allExpenses
-                                                    .toList(),
-                                                FFAppState()
-                                                    .queryTimestamps
-                                                    .toList())
-                                            .length >
-                                        0;
-                                    safeSetState(() {});
-                                    if (animationsMap[
-                                            'containerOnActionTriggerAnimation'] !=
-                                        null) {
-                                      safeSetState(
-                                          () => hasContainerTriggered = true);
-                                      SchedulerBinding.instance
-                                          .addPostFrameCallback((_) async =>
-                                              await animationsMap[
-                                                      'containerOnActionTriggerAnimation']!
-                                                  .controller
-                                                  .forward(from: 0.0));
-                                    }
-
-                                    safeSetState(() {});
-                                  },
-                                  text: FFAppState().month == 0
-                                      ? FFLocalizations.of(context)
-                                          .getVariableText(
-                                          enText: 'All Time',
-                                          esText: 'Tudo',
-                                        )
-                                      : '${functions.getMonthName(FFAppState().month, FFLocalizations.of(context).languageCode)}, ${FFAppState().year.toString()}',
-                                  icon: Icon(
-                                    Icons.date_range,
-                                    size: 16.0,
-                                  ),
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconColor: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    color: Color(0xFFE0E0E0),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w600,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .fontStyle,
-                                          ),
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(50.0),
-                                  ),
-                                ),
-                              ),
                               FlutterFlowIconButton(
                                 borderColor: Color(0x004B39EF),
                                 borderRadius: 20.0,
@@ -692,23 +540,6 @@ class _ReportWidgetState extends State<ReportWidget>
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
-                                                        Container(
-                                                          width: 40.0,
-                                                          height: 40.0,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                          child: Image.network(
-                                                            functions
-                                                                .getAssetFromCategory(
-                                                                    categoryItem)!,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
                                                         Expanded(
                                                           child: Padding(
                                                             padding:

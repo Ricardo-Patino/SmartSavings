@@ -40,12 +40,24 @@ class UsersRecord extends FirestoreRecord {
   DateTime? get creationDate => _creationDate;
   bool hasCreationDate() => _creationDate != null;
 
+  // "name" field.
+  String? _name;
+  String get name => _name ?? '';
+  bool hasName() => _name != null;
+
+  // "notificaciones" field.
+  bool? _notificaciones;
+  bool get notificaciones => _notificaciones ?? false;
+  bool hasNotificaciones() => _notificaciones != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _password = snapshotData['password'] as String?;
     _birthday = snapshotData['birthday'] as DateTime?;
     _active = snapshotData['active'] as bool?;
     _creationDate = snapshotData['creationDate'] as DateTime?;
+    _name = snapshotData['name'] as String?;
+    _notificaciones = snapshotData['notificaciones'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -87,6 +99,8 @@ Map<String, dynamic> createUsersRecordData({
   DateTime? birthday,
   bool? active,
   DateTime? creationDate,
+  String? name,
+  bool? notificaciones,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -95,6 +109,8 @@ Map<String, dynamic> createUsersRecordData({
       'birthday': birthday,
       'active': active,
       'creationDate': creationDate,
+      'name': name,
+      'notificaciones': notificaciones,
     }.withoutNulls,
   );
 
@@ -110,12 +126,21 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.password == e2?.password &&
         e1?.birthday == e2?.birthday &&
         e1?.active == e2?.active &&
-        e1?.creationDate == e2?.creationDate;
+        e1?.creationDate == e2?.creationDate &&
+        e1?.name == e2?.name &&
+        e1?.notificaciones == e2?.notificaciones;
   }
 
   @override
-  int hash(UsersRecord? e) => const ListEquality()
-      .hash([e?.email, e?.password, e?.birthday, e?.active, e?.creationDate]);
+  int hash(UsersRecord? e) => const ListEquality().hash([
+        e?.email,
+        e?.password,
+        e?.birthday,
+        e?.active,
+        e?.creationDate,
+        e?.name,
+        e?.notificaciones
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is UsersRecord;

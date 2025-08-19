@@ -5,6 +5,8 @@ import 'schema/util/firestore_util.dart';
 import 'schema/users_record.dart';
 import 'schema/categoria_record.dart';
 import 'schema/transaccion_record.dart';
+import 'schema/presupuesto_record.dart';
+import 'schema/metas_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -16,6 +18,8 @@ export 'schema/util/schema_util.dart';
 export 'schema/users_record.dart';
 export 'schema/categoria_record.dart';
 export 'schema/transaccion_record.dart';
+export 'schema/presupuesto_record.dart';
+export 'schema/metas_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -123,6 +127,80 @@ Future<List<TransaccionRecord>> queryTransaccionRecordOnce({
     queryCollectionOnce(
       TransaccionRecord.collection,
       TransaccionRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query PresupuestoRecords (as a Stream and as a Future).
+Future<int> queryPresupuestoRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      PresupuestoRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<PresupuestoRecord>> queryPresupuestoRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      PresupuestoRecord.collection,
+      PresupuestoRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<PresupuestoRecord>> queryPresupuestoRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      PresupuestoRecord.collection,
+      PresupuestoRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query MetasRecords (as a Stream and as a Future).
+Future<int> queryMetasRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      MetasRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<MetasRecord>> queryMetasRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      MetasRecord.collection,
+      MetasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<MetasRecord>> queryMetasRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      MetasRecord.collection,
+      MetasRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

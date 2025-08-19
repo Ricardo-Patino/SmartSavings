@@ -159,11 +159,10 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'MainPage': MainPageWidget(),
-      'PerfildeUsuario': PerfildeUsuarioWidget(),
+      'Profile': ProfileWidget(),
       'report': ReportWidget(),
+      'MainPage': MainPageWidget(),
       'settings': SettingsWidget(),
-      'RecuperarCuenta': RecuperarCuentaWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -199,7 +198,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.house_rounded,
+                  Icons.account_circle_outlined,
                   color: currentIndex == 0
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -207,7 +206,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'iiyrc3bk' /* Home */,
+                    'm3e43j1h' /* Profile */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -225,7 +224,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.account_circle_outlined,
+                  Icons.stacked_line_chart,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -233,7 +232,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'm3e43j1h' /* __ */,
+                    'g0u3eplo' /* Stats */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -251,7 +250,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.stacked_line_chart,
+                  Icons.house_rounded,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -259,7 +258,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'g0u3eplo' /* Stats */,
+                    'iiyrc3bk' /* Home */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -290,32 +289,6 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 3
-                        ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.key,
-                  color: currentIndex == 4
-                      ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).primaryText,
-                  size: 24.0,
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    '7byge8vi' /* Recover Account */,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 4
                         ? FlutterFlowTheme.of(context).primary
                         : FlutterFlowTheme.of(context).primaryText,
                     fontSize: 11.0,

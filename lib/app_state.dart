@@ -124,6 +124,12 @@ class FFAppState extends ChangeNotifier {
     prefs.setStringList(
         'ff_allExpenses', _allExpenses.map((x) => x.serialize()).toList());
   }
+
+  String _userLogged = '';
+  String get userLogged => _userLogged;
+  set userLogged(String value) {
+    _userLogged = value;
+  }
 }
 
 void _safeInit(Function() initializeField) {

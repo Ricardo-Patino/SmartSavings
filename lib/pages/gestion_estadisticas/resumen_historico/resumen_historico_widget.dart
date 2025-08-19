@@ -109,31 +109,7 @@ class _ResumenHistoricoWidgetState extends State<ResumenHistoricoWidget> {
                       FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: [
-            FFButtonWidget(
-              onPressed: () {
-                print('ButtonResumen pressed ...');
-              },
-              text: FFLocalizations.of(context).getText(
-                'e6jwfipq' /*  */,
-              ),
-              icon: Icon(
-                Icons.download_sharp,
-                size: 25.0,
-              ),
-              options: FFButtonOptions(
-                height: 400.0,
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                color: Color(0xFFE0E3E7),
-                textStyle: GoogleFonts.roboto(
-                  color: Color(0xFF020202),
-                ),
-                elevation: 0.0,
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-            ),
-          ],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),

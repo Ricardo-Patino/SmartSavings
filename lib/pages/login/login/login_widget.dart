@@ -180,8 +180,8 @@ class _LoginWidgetState extends State<LoginWidget>
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
                             'assets/images/SmartSavingsLogo.png',
-                            width: 80.0,
-                            height: 60.0,
+                            width: 120.0,
+                            height: 45.0,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -191,7 +191,7 @@ class _LoginWidgetState extends State<LoginWidget>
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 72.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'qggdbtg4' /* Smart$avings */,
+                            'qggdbtg4' /* SmartSavings */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .displaySmall

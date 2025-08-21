@@ -10,6 +10,10 @@ class ResumenMensualModel extends FlutterFlowModel<ResumenMensualWidget> {
   /// Fecha de Fin de Mes
   DateTime? finMes;
 
+  int? selectedMonth;
+
+  String? selectedYear;
+
   @override
   void initState(BuildContext context) {}
 

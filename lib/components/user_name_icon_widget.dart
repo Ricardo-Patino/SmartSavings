@@ -49,7 +49,7 @@ class _UserNameIconWidgetState extends State<UserNameIconWidget> {
       width: widget.size,
       height: widget.size,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).alternate,
+        color: Color(0xD928D84C),
         borderRadius: BorderRadius.circular(100.0),
       ),
       child: Icon(

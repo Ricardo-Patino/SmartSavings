@@ -10,11 +10,6 @@ class CreatePresupuestoPageModel
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for BuscarTextInput widget.
-  FocusNode? buscarTextInputFocusNode;
-  TextEditingController? buscarTextInputTextController;
-  String? Function(BuildContext, String?)?
-      buscarTextInputTextControllerValidator;
   // State field(s) for CategoriaDropDown widget.
   String? categoriaDropDownValue;
   FormFieldController<String>? categoriaDropDownValueController;
@@ -52,9 +47,6 @@ class CreatePresupuestoPageModel
 
   @override
   void dispose() {
-    buscarTextInputFocusNode?.dispose();
-    buscarTextInputTextController?.dispose();
-
     limiteInputFocusNode?.dispose();
     limiteInputTextController?.dispose();
   }

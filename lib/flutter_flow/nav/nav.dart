@@ -87,13 +87,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
         ),
         FFRoute(
-          name: ReportWidget.routeName,
-          path: ReportWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'report')
-              : ReportWidget(),
-        ),
-        FFRoute(
           name: SettingsWidget.routeName,
           path: SettingsWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -101,29 +94,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : SettingsWidget(),
         ),
         FFRoute(
-          name: CreateExpenseWidget.routeName,
-          path: CreateExpenseWidget.routePath,
-          builder: (context, params) => CreateExpenseWidget(),
-        ),
-        FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
           builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
-          name: SearchScreenWidget.routeName,
-          path: SearchScreenWidget.routePath,
-          builder: (context, params) => SearchScreenWidget(),
-        ),
-        FFRoute(
-          name: EditExpenseWidget.routeName,
-          path: EditExpenseWidget.routePath,
-          builder: (context, params) => EditExpenseWidget(
-            expenseId: params.getParam(
-              'expenseId',
-              ParamType.int,
-            ),
-          ),
         ),
         FFRoute(
           name: ProfileWidget.routeName,
@@ -192,10 +165,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
             name: EstadisticasWidget.routeName,
             path: EstadisticasWidget.routePath,
-            builder: (context, params) => NavBarPage(
-                  initialPage: '',
-                  page: EstadisticasWidget(),
-                )),
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'Estadisticas')
+                : NavBarPage(
+                    initialPage: 'Estadisticas',
+                    page: EstadisticasWidget(),
+                  )),
         FFRoute(
             name: ResumenMensualWidget.routeName,
             path: ResumenMensualWidget.routePath,

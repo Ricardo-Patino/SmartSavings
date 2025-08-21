@@ -12,6 +12,7 @@ import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'index.dart';
 
@@ -160,7 +161,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Profile': ProfileWidget(),
-      'report': ReportWidget(),
+      'Estadisticas': EstadisticasWidget(),
       'MainPage': MainPageWidget(),
       'settings': SettingsWidget(),
     };
@@ -182,7 +183,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: Color(0xFFE9E9E9),
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
         selectedItemColor: FlutterFlowTheme.of(context).primary,
         unselectedItemColor: FlutterFlowTheme.of(context).primaryText,
         selectedBackgroundColor: Color(0x00FFFFFF),
@@ -224,7 +225,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.stacked_line_chart,
+                  Icons.query_stats_outlined,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).primaryText,
@@ -232,14 +233,12 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'g0u3eplo' /* Stats */,
+                    'qjo5jlrb' /* Statistics */,
                   ),
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 11.0,
+                  style: GoogleFonts.roboto(
+                    color: Color(0x00000000),
+                    fontSize: 0.0,
                   ),
                 ),
               ],

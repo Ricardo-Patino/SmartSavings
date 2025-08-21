@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -50,47 +51,22 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).alternate,
           automaticallyImplyLeading: false,
-          leading: FFButtonWidget(
+          leading: FlutterFlowIconButton(
+            borderRadius: 8.0,
+            buttonSize: 40.0,
+            fillColor: FlutterFlowTheme.of(context).alternate,
+            icon: Icon(
+              Icons.arrow_back,
+              color: Color(0xBB000000),
+              size: 24.0,
+            ),
             onPressed: () async {
               context.safePop();
             },
-            text: FFLocalizations.of(context).getText(
-              'o0il1r9u' /*  */,
-            ),
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.0,
-            ),
-            options: FFButtonOptions(
-              height: 40.0,
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              iconColor: Colors.black,
-              color: Colors.transparent,
-              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                    font: GoogleFonts.inter(
-                      fontWeight:
-                          FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                    ),
-                    color: Colors.white,
-                    letterSpacing: 0.0,
-                    fontWeight:
-                        FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                  ),
-              elevation: 0.0,
-              borderSide: BorderSide(
-                width: 8.0,
-              ),
-              borderRadius: BorderRadius.circular(8.0),
-            ),
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              '5ia153st' /* Statistics and Reports */,
+              'wfbp2b13' /* Statistics and Reports */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -149,7 +125,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                     16.0, 0.0, 16.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
+                                color: Color(0xD928D84C),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -184,8 +160,9 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                           Padding(
                             padding: EdgeInsets.all(10.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('HistoricoButton pressed ...');
+                              onPressed: () async {
+                                context.pushNamed(
+                                    ResumenHistoricoWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
                                 'kx7nk5nm' /* Historical */,
@@ -197,7 +174,7 @@ class _EstadisticasWidgetState extends State<EstadisticasWidget> {
                                     16.0, 0.0, 16.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFFD89028),
+                                color: Color(0xD928D84C),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(

@@ -9,11 +9,6 @@ class EditarTransaccionPageModel
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for BuscarTextInput widget.
-  FocusNode? buscarTextInputFocusNode;
-  TextEditingController? buscarTextInputTextController;
-  String? Function(BuildContext, String?)?
-      buscarTextInputTextControllerValidator;
   // State field(s) for MontoInput widget.
   FocusNode? montoInputFocusNode;
   TextEditingController? montoInputTextController;
@@ -70,9 +65,6 @@ class EditarTransaccionPageModel
 
   @override
   void dispose() {
-    buscarTextInputFocusNode?.dispose();
-    buscarTextInputTextController?.dispose();
-
     montoInputFocusNode?.dispose();
     montoInputTextController?.dispose();
 

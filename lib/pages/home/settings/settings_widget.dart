@@ -202,8 +202,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: Color(
-                                                                    0xFF212121),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
                                                                 fontSize: 16.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -240,8 +241,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: Color(
-                                                                    0xFF424242),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
                                                                 fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,

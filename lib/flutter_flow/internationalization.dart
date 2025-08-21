@@ -144,25 +144,6 @@ bool _isSupportedLocale(Locale locale) {
 }
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // report
-  {
-    'pxio3obv': {
-      'en': 'Statistics',
-      'es': 'Estadística',
-    },
-    '27cpwyz9': {
-      'en': 'OVERVIEW',
-      'es': 'DESCRIPCIÓN GENERAL',
-    },
-    'ohe1klja': {
-      'en': 'DETAILS',
-      'es': 'DETALLES',
-    },
-    'g0u3eplo': {
-      'en': 'Stats',
-      'es': 'Estadísticas',
-    },
-  },
   // settings
   {
     '2l9eplby': {
@@ -210,153 +191,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Ajustes',
     },
   },
-  // createExpense
-  {
-    'fpobmyte': {
-      'en': 'Income',
-      'es': 'Ingreso',
-    },
-    '3klurzok': {
-      'en': 'Income/Budget',
-      'es': 'Ingresos/Presupuesto',
-    },
-    'vy8e0ryy': {
-      'en': 'Search for an item...',
-      'es': 'Buscar un artículo...',
-    },
-    '9acdjdrd': {
-      'en': 'Expense',
-      'es': 'Gastos',
-    },
-    'u0a7tcan': {
-      'en': 'Invoice',
-      'es': 'Factura',
-    },
-    'dnb6be8k': {
-      'en': 'Select Category',
-      'es': 'Seleccionar categoría',
-    },
-    '7trmhkmt': {
-      'en': 'Search for an category',
-      'es': 'Buscar una categoría',
-    },
-    '9aedrjo6': {
-      'en': 'Cafe',
-      'es': 'Cafetería',
-    },
-    'qtnqe1gr': {
-      'en': 'Donate',
-      'es': 'Donar',
-    },
-    '01q69rbk': {
-      'en': 'Education',
-      'es': 'Educación',
-    },
-    'xgex1toh': {
-      'en': 'Electronics',
-      'es': 'Electrónica',
-    },
-    'wpbca363': {
-      'en': 'Fuel',
-      'es': 'Combustible',
-    },
-    'k3dp84tb': {
-      'en': 'Gifts',
-      'es': 'Regalos',
-    },
-    '01ofez8y': {
-      'en': 'Groceries',
-      'es': 'Comestibles',
-    },
-    'wniujuhd': {
-      'en': 'Health',
-      'es': 'Salud',
-    },
-    'imwgy8r6': {
-      'en': 'Institute',
-      'es': 'Instituto',
-    },
-    'qkpmudg0': {
-      'en': 'Laundry',
-      'es': 'Lavandería',
-    },
-    '41nxlk99': {
-      'en': 'Liquor',
-      'es': 'Licor',
-    },
-    'y76rocai': {
-      'en': 'Maintenance',
-      'es': 'Mantenimiento',
-    },
-    '2g5bblws': {
-      'en': 'Party',
-      'es': 'Fiesta',
-    },
-    '3x9rfu5h': {
-      'en': 'Resturant',
-      'es': 'Restaurante',
-    },
-    '3755zwmx': {
-      'en': 'Savings',
-      'es': 'Ahorros',
-    },
-    'vxa67gbw': {
-      'en': 'Self Development',
-      'es': 'Desarrollo personal',
-    },
-    '9megapk5': {
-      'en': 'Sport',
-      'es': 'Deporte',
-    },
-    'cqknees2': {
-      'en': 'Transportation',
-      'es': 'Transporte',
-    },
-    'gwjpp0l1': {
-      'en': 'Enter amount',
-      'es': 'Ingrese el monto',
-    },
-    'tf6lw3vg': {
-      'en': 'Description (Optional)',
-      'es': 'Descripción (opcional)',
-    },
-    'e0vktzak': {
-      'en': 'Add a new',
-      'es': 'Agregar uno nuevo',
-    },
-    '58q75359': {
-      'en': 'Amount is required',
-      'es': 'Se requiere cantidad',
-    },
-    'c842khfl': {
-      'en': 'Invalid value for Amount. Ex: 90.50',
-      'es': 'Valor iválido para el importe. Ejemplo: 90,50',
-    },
-    'bcchv2ht': {
-      'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor, elija una opción del menú desplegable.',
-    },
-    '0jwizuht': {
-      'en': 'Field is required',
-      'es': 'El campo es obligatorio',
-    },
-    '98ardp74': {
-      'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor, elija una opción del menú desplegable.',
-    },
-    'zhym1v85': {
-      'en': 'Add new',
-      'es': 'Añadir nuevo',
-    },
-    'jjce6u3q': {
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // login
   {
     'qggdbtg4': {
-      'en': 'Smart\$avings',
+      'en': 'SmartSavings',
       'es': 'Smart\$avings',
     },
     'kxiutu7a': {
@@ -446,180 +284,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '¿Has olvidado tu contraseña?',
     },
     '3jpxqy42': {
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
-  // searchScreen
-  {
-    'f6qitlvn': {
-      'en': 'Search for categories or labels',
-      'es': 'Buscar categorías o etiquetas',
-    },
-    'z0p8gblh': {
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
-  // editExpense
-  {
-    'cgf3ygl7': {
-      'en': 'Income',
-      'es': 'Ingreso',
-    },
-    'hko6ezg3': {
-      'en': 'Income/Budget',
-      'es': 'Ingresos/Presupuesto',
-    },
-    'vw8adcit': {
-      'en': 'Search for an item...',
-      'es': 'Buscar un artículo...',
-    },
-    'fw9vxr1w': {
-      'en': 'Expense',
-      'es': 'Gastos',
-    },
-    'c8ij0gvp': {
-      'en': 'Invoice',
-      'es': 'Factura',
-    },
-    'q8mye2zp': {
-      'en': 'Select Category',
-      'es': 'Seleccionar categoría',
-    },
-    'f0jdrxdm': {
-      'en': 'Search for an category',
-      'es': 'Buscar una categoría',
-    },
-    'nr8h2ng1': {
-      'en': 'Cafe',
-      'es': 'Cafetería',
-    },
-    'z05440ij': {
-      'en': 'Donate',
-      'es': 'Donar',
-    },
-    '5uh6sul0': {
-      'en': 'Education',
-      'es': 'Educación',
-    },
-    'w5hqz7yh': {
-      'en': 'Electronics',
-      'es': 'Electrónica',
-    },
-    '8gw9w48m': {
-      'en': 'Fuel',
-      'es': 'Combustible',
-    },
-    'x9y9xu7k': {
-      'en': 'Gifts',
-      'es': 'Regalos',
-    },
-    'liw1djky': {
-      'en': 'Groceries',
-      'es': 'Comestibles',
-    },
-    'nz1ihdqw': {
-      'en': 'Health',
-      'es': 'Salud',
-    },
-    '80ibmr1j': {
-      'en': 'Institute',
-      'es': 'Instituto',
-    },
-    'yva1sh8h': {
-      'en': 'Laundry',
-      'es': 'Lavandería',
-    },
-    'nu1fvykc': {
-      'en': 'Liquor',
-      'es': 'Licor',
-    },
-    'bv3dr91r': {
-      'en': 'Maintenance',
-      'es': 'Mantenimiento',
-    },
-    'etzdfyfa': {
-      'en': 'Party',
-      'es': 'Fiesta',
-    },
-    '6fyj8k7i': {
-      'en': 'Resturant',
-      'es': 'Restaurante',
-    },
-    '23e13o2q': {
-      'en': 'Savings',
-      'es': 'Ahorros',
-    },
-    'ydnrvygz': {
-      'en': 'Self Development',
-      'es': 'Desarrollo personal',
-    },
-    '057cd24w': {
-      'en': 'Sport',
-      'es': 'Deporte',
-    },
-    'dbec15tp': {
-      'en': 'Transportation',
-      'es': 'Transporte',
-    },
-    'ifjlvbhd': {
-      'en': 'Enter amount',
-      'es': 'Ingrese el monto',
-    },
-    'vg84m6jc': {
-      'en': 'Description (Optional)',
-      'es': 'Descripción (opcional)',
-    },
-    'rt1ash54': {
-      'en': 'Edit',
-      'es': 'Editar',
-    },
-    'tbhvf5pj': {
-      'en': 'Delete',
-      'es': 'Borrar',
-    },
-    'izjvzi7f': {
-      'en': 'Confirm delete',
-      'es': 'Confirmar eliminación',
-    },
-    'r4m1t0a1': {
-      'en': 'Are you sure you want to delete this expense/income?',
-      'es': '¿Está seguro de que desea eliminar este gasto/ingreso?',
-    },
-    '2gh6bfnu': {
-      'en': 'Cancel',
-      'es': 'Cancelar',
-    },
-    '6bd89nbx': {
-      'en': 'Confirm',
-      'es': 'Confirmar',
-    },
-    'z0ydpuso': {
-      'en': 'Amount is required',
-      'es': 'Se requiere cantidad',
-    },
-    '0636u1e0': {
-      'en': 'Invalid value for Amount. Ex: 90.50',
-      'es': 'Valor no válido para el importe. Ejemplo: 90,50',
-    },
-    'ayp6tbzf': {
-      'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor, elija una opción del menú desplegable.',
-    },
-    'b2iwa2um': {
-      'en': 'Field is required',
-      'es': 'El campo es obligatorio',
-    },
-    '9rowbj3s': {
-      'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor, elija una opción del menú desplegable.',
-    },
-    '0rsd07xx': {
-      'en': 'Edit',
-      'es': 'Editar',
-    },
-    'qva4jc6s': {
       'en': 'Home',
       'es': 'Hogar',
     },
@@ -786,9 +450,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Confirm',
       'es': 'Confirmar',
     },
-    'azbojv9q': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'qwivjl3x': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'hes8elfq': {
       'en': 'Budget',
@@ -817,17 +481,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CategoriaPage
   {
-    'ddij108r': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
-    },
-    '9tjrw4x8': {
-      'en': 'Create Category',
-      'es': 'Crear una categoría',
-    },
     'm7aautrm': {
       'en': 'Categories',
       'es': 'Categorías',
+    },
+    '3ojlu2k2': {
+      'en': 'SmartSavings',
+      'es': '',
+    },
+    '78aqpwvh': {
+      'en': 'Create Category',
+      'es': 'Crear una categoría',
     },
     'km7bkpuz': {
       'en': 'Home',
@@ -836,9 +500,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CrearCategoriaPage
   {
-    't1lixowk': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'b6yfi4jy': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'qiaafl4j': {
       'en': 'Name',
@@ -923,9 +587,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // EditarCategoriaPage
   {
-    'hq73frmb': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'rd0agjk3': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     's726lfh5': {
       'en': 'Name',
@@ -994,9 +658,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // TransaccionPage
   {
-    'cc5gj5n9': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'ijjmto58': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'scer8xjf': {
       'en': 'Create transaction',
@@ -1013,9 +677,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CrearTransaccionPage
   {
-    'ndg73yu8': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'b04t1fq4': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'dmfu4gdt': {
       'en': 'Amount',
@@ -1168,14 +832,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Estadisticas
   {
-    '5ia153st': {
-      'en': 'Statistics and Reports',
-      'es': 'Estadísticas y informes',
-    },
-    'o0il1r9u': {
-      'en': '',
-      'es': '',
-    },
     'c0ax7k2b': {
       'en': 'Monthly Summary',
       'es': 'Resumen mensual',
@@ -1184,28 +840,34 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Historical',
       'es': 'Histórico',
     },
+    'wfbp2b13': {
+      'en': 'Statistics and Reports',
+      'es': 'Estadísticas y Reportes',
+    },
     'qjo5jlrb': {
-      'en': 'Home',
+      'en': 'Statistics',
       'es': 'Hogar',
     },
   },
   // ResumenMensual
   {
-    'gjoby9av': {
+    '9oqghfaz': {
+      'en': 'Date',
+      'es': 'Fecha',
+    },
+    'fdj3m0pw': {
+      'en': 'Amount',
+      'es': 'Monto',
+    },
+    'j1g286dt': {
+      'en':
+          'This chart shows information about transaction dates and amounts for the current month.',
+      'es':
+          'Este gráfico muestra información sobre las fechas y los montos de las transacciones del mes actual.',
+    },
+    'fg40umyx': {
       'en': 'Monthly Summary',
       'es': 'Resumen mensual',
-    },
-    'mx7bpzwl': {
-      'en': 'Button',
-      'es': 'Botón',
-    },
-    'v4kb7vu2': {
-      'en': 'Date',
-      'es': '',
-    },
-    'jcjg6tnl': {
-      'en': 'Amount',
-      'es': '',
     },
     '0w4dx888': {
       'en': 'Home',
@@ -1214,17 +876,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ResumenHistorico
   {
-    '9cgiyqhv': {
+    'm57r2bb3': {
+      'en': 'Date',
+      'es': 'Fecha',
+    },
+    '1nukmxia': {
+      'en': 'Amount',
+      'es': 'Monto',
+    },
+    'ecahpql1': {
+      'en':
+          'This chart shows information about transaction dates and amounts from the start date to the current date.',
+      'es':
+          'En este gráfico se muestra la información sobre las fechas de las transacciones y el monto desde el inicio hasta la fecha actual.',
+    },
+    'a90a3rnh': {
       'en': 'Historical Summary',
-      'es': 'Resumen histórico',
-    },
-    '4doav718': {
-      'en': 'Button',
-      'es': 'Botón',
-    },
-    '2r39jn3v': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+      'es': 'Resumen Histórico',
     },
     'cjdeuzi9': {
       'en': 'Home',
@@ -1237,9 +905,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Metas de Ahorro',
       'es': 'Metas de Ahorro',
     },
-    'qj1z20s0': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'gjzxj8bo': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'ewytv51a': {
       'en': 'Create Goal',
@@ -1264,9 +932,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // editarTransaccionPage
   {
-    'r4yf0mwt': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    '8varpm4v': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     '2s0omiez': {
       'en': 'Amount',
@@ -1419,9 +1087,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // PresupuestoPage
   {
-    'g0fpq6zm': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    '4kud5zzx': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'tkz6qevh': {
       'en': 'Create budget',
@@ -1438,9 +1106,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // createPresupuestoPage
   {
-    '3ksj9krf': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'j7ki00uv': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'cjb9frs9': {
       'en': 'Categorie',
@@ -1578,7 +1246,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Limit is required',
       'es': 'Se requiere límite',
     },
-    't02hkols': {
+    'y6xptgi7': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor, elija una opción del menú desplegable.',
     },
@@ -1601,9 +1269,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // editarPresupuestoPage
   {
-    'l7oe1agl': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'qzx2mox0': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'lre76e3v': {
       'en': 'Categorie',
@@ -1764,9 +1432,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // crearMetaPage
   {
-    'gley96d9': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    '1hvg6l5d': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'uy24erax': {
       'en': 'Name',
@@ -1851,9 +1519,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Active Goals',
       'es': 'Metas activas',
     },
-    '0jnunjg5': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'bq9zsvfw': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'rlooipn9': {
       'en': 'Home',
@@ -1866,9 +1534,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Accomplished Goals',
       'es': 'Metas cumplidas',
     },
-    'ba5d06km': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'q1v3gmil': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'pw7j3e26': {
       'en': 'Home',
@@ -1881,24 +1549,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'All Goals',
       'es': 'Metas cumplidas',
     },
-    'txx59qo1': {
-      'en': 'What are you searching?',
-      'es': '¿Qué estás buscando?',
+    'na698quy': {
+      'en': 'SmartSavings',
+      'es': '',
     },
     'b041pw5x': {
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // month_picker_dialog
-  {
-    'kitcrcil': {
-      'en': 'PICK A MONTH',
-      'es': 'ELIGE UN MES',
-    },
-    'oaiocrqj': {
-      'en': 'ALL TIME',
-      'es': 'TODOS LOS TIEMPOS',
     },
   },
   // bottomsheet_change_language

@@ -8,18 +8,10 @@ class MainPageModel extends FlutterFlowModel<MainPageWidget> {
 
   // Stores action output result for [Alert Dialog - Custom Dialog] action in IconButton widget.
   bool? confirmLogout;
-  // State field(s) for BuscarTextInput widget.
-  FocusNode? buscarTextInputFocusNode;
-  TextEditingController? buscarTextInputTextController;
-  String? Function(BuildContext, String?)?
-      buscarTextInputTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    buscarTextInputFocusNode?.dispose();
-    buscarTextInputTextController?.dispose();
-  }
+  void dispose() {}
 }

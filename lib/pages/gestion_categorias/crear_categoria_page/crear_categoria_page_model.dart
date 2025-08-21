@@ -10,11 +10,6 @@ class CrearCategoriaPageModel
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for BuscarTextInput widget.
-  FocusNode? buscarTextInputFocusNode;
-  TextEditingController? buscarTextInputTextController;
-  String? Function(BuildContext, String?)?
-      buscarTextInputTextControllerValidator;
   // State field(s) for NombreInput widget.
   FocusNode? nombreInputFocusNode;
   TextEditingController? nombreInputTextController;
@@ -61,9 +56,6 @@ class CrearCategoriaPageModel
 
   @override
   void dispose() {
-    buscarTextInputFocusNode?.dispose();
-    buscarTextInputTextController?.dispose();
-
     nombreInputFocusNode?.dispose();
     nombreInputTextController?.dispose();
 

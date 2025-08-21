@@ -986,8 +986,8 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/SmartSavingsLogo.png',
-                      width: 40.0,
-                      height: 30.0,
+                      width: 120.0,
+                      height: 45.0,
                       fit: BoxFit.cover,
                     ),
                   ),

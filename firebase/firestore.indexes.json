@@ -9,7 +9,7 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "periodDate",
+          "fieldPath": "createdAt",
           "order": "ASCENDING"
         }
       ]

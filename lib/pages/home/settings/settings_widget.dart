@@ -505,7 +505,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                        'ayj7zciz' /* Do you really want to get out ... */,
+                                                        'ayj7zciz' /* Do you really want to log out ... */,
                                                       ),
                                                       cancelLabel:
                                                           FFLocalizations.of(

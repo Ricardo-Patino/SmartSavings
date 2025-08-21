@@ -96,7 +96,7 @@ class _EditarPresupuestoPageWidgetState
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -191,7 +191,7 @@ class _EditarPresupuestoPageWidgetState
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'lre76e3v' /* Categorie */,
+                                      'lre76e3v' /* Category */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -595,7 +595,7 @@ class _EditarPresupuestoPageWidgetState
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'm2wy9ixj' /* Limite */,
+                                      'm2wy9ixj' /* Limit */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium

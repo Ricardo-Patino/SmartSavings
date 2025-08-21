@@ -66,7 +66,7 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              '8ntertnt' /* Metas de Ahorro */,
+              '8ntertnt' /* Saving Goals */,
             ),
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -76,7 +76,7 @@ class _MetasAhorroWidgetState extends State<MetasAhorroWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                   ),
-                  color: Color(0xBB000000),
+                  color: Color(0xBBFFFFFF),
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   fontWeight:

@@ -89,7 +89,7 @@ class _CrearMetaPageWidgetState extends State<CrearMetaPageWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -467,12 +467,12 @@ class _CrearMetaPageWidgetState extends State<CrearMetaPageWidget> {
                                         FormFieldController<String>(
                                   _model.stateDropDownValue ??=
                                       FFLocalizations.of(context).getText(
-                                    'r0ldoj4d' /* Accomplished */,
+                                    'r0ldoj4d' /* Achieved */,
                                   ),
                                 ),
                                 options: [
                                   FFLocalizations.of(context).getText(
-                                    'vbhmqw39' /* Accomplished */,
+                                    'vbhmqw39' /* Achieved */,
                                   ),
                                   FFLocalizations.of(context).getText(
                                     'g9y5zhjv' /* In progress */,
@@ -505,7 +505,7 @@ class _CrearMetaPageWidgetState extends State<CrearMetaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  'rgrs6qbb' /* Select. */,
+                                  'rgrs6qbb' /* Select */,
                                 ),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,

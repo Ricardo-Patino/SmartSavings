@@ -2,7 +2,7 @@
 export '/pages/home/settings/settings_widget.dart' show SettingsWidget;
 export '/pages/login/login/login_widget.dart' show LoginWidget;
 export '/pages/login/profile/profile_widget.dart' show ProfileWidget;
-export '/pages/forgot_password/forgot_password_widget.dart'
+export '/pages/login/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
 export '/pages/home/main_page/main_page_widget.dart' show MainPageWidget;
 export '/pages/gestion_categorias/categoria_page/categoria_page_widget.dart'

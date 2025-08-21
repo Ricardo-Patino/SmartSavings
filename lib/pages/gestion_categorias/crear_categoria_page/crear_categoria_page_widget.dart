@@ -92,7 +92,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -524,7 +524,7 @@ class _CrearCategoriaPageWidgetState extends State<CrearCategoriaPageWidget> {
                                           .fontStyle,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
-                                  '0w28gbwg' /* Select. */,
+                                  '0w28gbwg' /* Select */,
                                 ),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,

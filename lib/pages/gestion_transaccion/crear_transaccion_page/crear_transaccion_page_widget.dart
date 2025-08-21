@@ -93,7 +93,7 @@ class _CrearTransaccionPageWidgetState
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -513,7 +513,7 @@ class _CrearTransaccionPageWidgetState
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      '6dbyffc8' /* Categorie */,
+                                      '6dbyffc8' /* Category */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium

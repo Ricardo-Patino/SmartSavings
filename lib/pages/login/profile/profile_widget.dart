@@ -240,7 +240,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             .headlineMedium
                             .fontStyle,
                       ),
-                      color: Color(0xBB000000),
+                      color: Color(0xBBFFFFFF),
                       fontSize: 22.0,
                       letterSpacing: 0.0,
                       fontWeight: FlutterFlowTheme.of(context)

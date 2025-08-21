@@ -198,7 +198,7 @@ class _BottomsheetChangeLanguageWidgetState
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                'g0m2mfu7' /* Español */,
+                                'g0m2mfu7' /* Spanish */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

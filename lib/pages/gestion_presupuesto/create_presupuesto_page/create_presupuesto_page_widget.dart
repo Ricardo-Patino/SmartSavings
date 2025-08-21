@@ -90,7 +90,7 @@ class _CreatePresupuestoPageWidgetState
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -185,7 +185,7 @@ class _CreatePresupuestoPageWidgetState
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'cjb9frs9' /* Categorie */,
+                                      'cjb9frs9' /* Category */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium

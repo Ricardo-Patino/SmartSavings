@@ -65,7 +65,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                   ),
-                  color: Color(0xBB000000),
+                  color: Color(0xBBFFFFFF),
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   fontWeight:
@@ -210,63 +210,6 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
-                                          PresupuestoPageWidget.routeName);
-                                    },
-                                    text: FFLocalizations.of(context).getText(
-                                      'hes8elfq' /* Budget */,
-                                    ),
-                                    icon: Icon(
-                                      Icons.attach_money_sharp,
-                                      size: 20.0,
-                                    ),
-                                    options: FFButtonOptions(
-                                      width: 150.0,
-                                      height: 40.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 16.0, 0.0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xD928D84C),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            font: GoogleFonts.inter(
-                                              fontWeight:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .fontStyle,
-                                            ),
-                                            color: Color(0xBB000000),
-                                            letterSpacing: 0.0,
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLarge
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLarge
-                                                    .fontStyle,
-                                          ),
-                                      borderRadius: BorderRadius.circular(40.0),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.all(10.0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      context.pushNamed(
                                           CategoriaPageWidget.routeName);
                                     },
                                     text: FFLocalizations.of(context).getText(
@@ -316,6 +259,63 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                 ),
                               ],
                             ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                          PresupuestoPageWidget.routeName);
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'hes8elfq' /* Budget */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.attach_money_sharp,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xD928D84C),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xBB000000),
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
+                                          ),
+                                      borderRadius: BorderRadius.circular(40.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -331,7 +331,7 @@ class _MainPageWidgetState extends State<MainPageWidget> {
                                     .pushNamed(TransaccionPageWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'ciopx9q0' /* Register Transation */,
+                                'ciopx9q0' /* Register Transaction */,
                               ),
                               icon: Icon(
                                 Icons.calculate_outlined,

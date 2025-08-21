@@ -99,7 +99,7 @@ class _EditarTransaccionPageWidgetState
                       fontStyle:
                           FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                     ),
-                    color: Color(0xBB000000),
+                    color: Color(0xBBFFFFFF),
                     fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight:
@@ -519,7 +519,7 @@ class _EditarTransaccionPageWidgetState
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'epv57tqz' /* Categorie */,
+                                      'epv57tqz' /* Category */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium

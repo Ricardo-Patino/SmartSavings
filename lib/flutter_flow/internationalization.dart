@@ -175,7 +175,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Cerrar sesión',
     },
     'ayj7zciz': {
-      'en': 'Do you really want to get out of SmartSavings?',
+      'en': 'Do you really want to log out of SmartSavings?',
       'es': '¿De verdad quieres salir de SmartSavings?',
     },
     'u77kd0xv': {
@@ -217,7 +217,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mb5anmnv': {
       'en': 'Username',
-      'es': 'Dirección de correo electrónico',
+      'es': 'Usuario',
     },
     'p15p750c': {
       'en': '',
@@ -285,7 +285,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3jpxqy42': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // Profile
@@ -324,11 +324,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'e7q5nec8': {
       'en': 'Confirm Password',
-      'es': 'confirmar Contraseña',
+      'es': 'Confirmar Contraseña',
     },
     'knm3nxlj': {
       'en': 'Save',
-      'es': 'Ahorrar',
+      'es': 'Guardar',
     },
     '2e4ialf9': {
       'en': 'Delete Account',
@@ -387,15 +387,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'yye6rchf': {
       'en': 'Recover your Account',
-      'es': 'Recupera tu cuenta',
+      'es': 'Recuperar cuenta',
     },
     'glv2fwtw': {
       'en': 'Account Recovery',
-      'es': 'Recuperación de cuenta',
+      'es': 'Recuperar cuenta',
     },
     '57y9rke6': {
       'en': 'Recover your Account',
-      'es': 'Recupera tu cuenta',
+      'es': 'Recuperar cuenta',
     },
     'aw6f1y64': {
       'en':
@@ -452,18 +452,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qwivjl3x': {
       'en': 'SmartSavings',
-      'es': '',
-    },
-    'hes8elfq': {
-      'en': 'Budget',
-      'es': 'Presupuesto',
+      'es': 'SmartSavings',
     },
     'pokpgbki': {
       'en': 'Categories',
       'es': 'Categorías',
     },
+    'hes8elfq': {
+      'en': 'Budget',
+      'es': 'Presupuesto',
+    },
     'ciopx9q0': {
-      'en': 'Register Transation',
+      'en': 'Register Transaction',
       'es': 'Registrar Transacción',
     },
     '489bv5vf': {
@@ -476,7 +476,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'iiyrc3bk': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // CategoriaPage
@@ -487,22 +487,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3ojlu2k2': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     '78aqpwvh': {
       'en': 'Create Category',
-      'es': 'Crear una categoría',
+      'es': 'Crear categoría',
     },
     'km7bkpuz': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // CrearCategoriaPage
   {
     'b6yfi4jy': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'qiaafl4j': {
       'en': 'Name',
@@ -525,8 +525,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Color',
     },
     '0w28gbwg': {
-      'en': 'Select.',
-      'es': 'Seleccionar.',
+      'en': 'Select',
+      'es': 'Seleccionar',
     },
     '4jmikidz': {
       'en': 'Search...',
@@ -566,7 +566,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'vp2jka42': {
       'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor, elija una opción del menú desplegable.',
+      'es': 'Por favor, elija una opción del menú desplegable',
     },
     '2948cd55': {
       'en': 'Create Category',
@@ -582,14 +582,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'u7bbj4hw': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // EditarCategoriaPage
   {
     'rd0agjk3': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     's726lfh5': {
       'en': 'Name',
@@ -653,14 +653,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'vr15lact': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // TransaccionPage
   {
     'ijjmto58': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'scer8xjf': {
       'en': 'Create transaction',
@@ -672,14 +672,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'uncw6xni': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // CrearTransaccionPage
   {
     'b04t1fq4': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'dmfu4gdt': {
       'en': 'Amount',
@@ -698,7 +698,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Descripción',
     },
     '6dbyffc8': {
-      'en': 'Categorie',
+      'en': 'Category',
       'es': 'Categoría',
     },
     'gyvyb1pt': {
@@ -827,7 +827,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7bxj4lnw': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // Estadisticas
@@ -846,7 +846,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qjo5jlrb': {
       'en': 'Statistics',
-      'es': 'Hogar',
+      'es': 'Estadísticas',
     },
   },
   // ResumenMensual
@@ -871,7 +871,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0w4dx888': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // ResumenHistorico
@@ -896,18 +896,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cjdeuzi9': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // MetasAhorro
   {
     '8ntertnt': {
-      'en': 'Metas de Ahorro',
+      'en': 'Saving Goals',
       'es': 'Metas de Ahorro',
     },
     'gjzxj8bo': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'ewytv51a': {
       'en': 'Create Goal',
@@ -927,14 +927,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'djnluawr': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // editarTransaccionPage
   {
     '8varpm4v': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     '2s0omiez': {
       'en': 'Amount',
@@ -953,7 +953,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Descripción',
     },
     'epv57tqz': {
-      'en': 'Categorie',
+      'en': 'Category',
       'es': 'Categoría',
     },
     '2e63xcjy': {
@@ -1082,14 +1082,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'b2kltpsr': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // PresupuestoPage
   {
     '4kud5zzx': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'tkz6qevh': {
       'en': 'Create budget',
@@ -1101,17 +1101,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mpya2u3q': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // createPresupuestoPage
   {
     'j7ki00uv': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'cjb9frs9': {
-      'en': 'Categorie',
+      'en': 'Category',
       'es': 'Categoría',
     },
     '1oo12sy8': {
@@ -1264,17 +1264,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     't4a5egmx': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // editarPresupuestoPage
   {
     'qzx2mox0': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'lre76e3v': {
-      'en': 'Categorie',
+      'en': 'Category',
       'es': 'Categoria',
     },
     't6vy0hb6': {
@@ -1398,7 +1398,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'USD',
     },
     'm2wy9ixj': {
-      'en': 'Limite',
+      'en': 'Limit',
       'es': 'Limite',
     },
     'omlgyldu': {
@@ -1427,14 +1427,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dl1a78zm': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // crearMetaPage
   {
     '1hvg6l5d': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'uy24erax': {
       'en': 'Name',
@@ -1457,19 +1457,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Estado',
     },
     'r0ldoj4d': {
-      'en': 'Accomplished',
+      'en': 'Achieved',
       'es': 'Logrado',
     },
     'rgrs6qbb': {
-      'en': 'Select.',
-      'es': 'Seleccionar.',
+      'en': 'Select',
+      'es': 'Seleccionar',
     },
     '9hqlj2zd': {
       'en': 'Search...',
       'es': 'Buscar...',
     },
     'vbhmqw39': {
-      'en': 'Accomplished',
+      'en': 'Achieved',
       'es': 'Logrado',
     },
     'g9y5zhjv': {
@@ -1510,7 +1510,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'txu6g4lu': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // MetasActivasPage
@@ -1521,11 +1521,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bq9zsvfw': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'rlooipn9': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // MetasCompletasPage
@@ -1536,26 +1536,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'q1v3gmil': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'pw7j3e26': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // VerMetas
   {
     'g5u5h4g6': {
       'en': 'All Goals',
-      'es': 'Metas cumplidas',
+      'es': 'Todas las metas',
     },
     'na698quy': {
       'en': 'SmartSavings',
-      'es': '',
+      'es': 'SmartSavings',
     },
     'b041pw5x': {
       'en': 'Home',
-      'es': 'Hogar',
+      'es': 'Inicio',
     },
   },
   // bottomsheet_change_language
@@ -1569,7 +1569,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Inglés',
     },
     'g0m2mfu7': {
-      'en': 'Español',
+      'en': 'Spanish',
       'es': 'Español',
     },
   },

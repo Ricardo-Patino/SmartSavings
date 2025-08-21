@@ -1,3 +1,4 @@
+import '/auth/custom_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_charts.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -42,8 +43,12 @@ class _ResumenHistoricoWidgetState extends State<ResumenHistoricoWidget> {
   Widget build(BuildContext context) {
     return StreamBuilder<List<TransaccionRecord>>(
       stream: queryTransaccionRecord(
-        queryBuilder: (transaccionRecord) =>
-            transaccionRecord.orderBy('createdAt'),
+        queryBuilder: (transaccionRecord) => transaccionRecord
+            .where(
+              'ownerID',
+              isEqualTo: currentUserUid,
+            )
+            .orderBy('createdAt'),
       ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
@@ -104,7 +109,7 @@ class _ResumenHistoricoWidgetState extends State<ResumenHistoricoWidget> {
                             .headlineMedium
                             .fontStyle,
                       ),
-                      color: Color(0xBB000000),
+                      color: Color(0xBBFFFFFF),
                       fontSize: 22.0,
                       letterSpacing: 0.0,
                       fontWeight: FlutterFlowTheme.of(context)

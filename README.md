@@ -1,6 +1,6 @@
 # SmartSavings - Proyecto 
 
-A new Flutter project.
+A project using; Dart, Flutter, Firebase/Firestore, APIs.
 
 ## Getting Started
 
